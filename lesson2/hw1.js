@@ -23,7 +23,6 @@ console.log(music[7]);
 console.log(music[8]);
 console.log(music[9]);
 
-
 // // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 let book1 = {
     title: 'Go where it\'s scary. That is where you will find strength',
