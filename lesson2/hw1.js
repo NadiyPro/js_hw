@@ -135,3 +135,50 @@ console.log(users[7]['password']);
 console.log(users[8]['password']);
 console.log(users[9]['password']);
 
+// // - описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів.
+// Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу
+let weather = [
+    {
+        weekday: 'Monday',
+        morning: 11,
+        day: 20,
+        evening: 16
+    },
+    {
+        weekday: 'Tuesday',
+        morning: 10,
+        day: 25,
+        evening: 18
+    },
+    {
+        weekday: 'Wednesday',
+        morning: 16,
+        day: 27,
+        evening: 19
+    },
+    {
+        weekday: 'Thursday',
+        morning: 17,
+        day: 28,
+        evening: 15
+    },
+    {
+        weekday: 'Friday',
+        morning: 19,
+        day: 29,
+        evening: 20
+    },
+    {
+        weekday: 'Saturday',
+        morning: 17,
+        day: 24,
+        evening: 16
+    },
+    {
+        weekday: 'Sunday',
+        morning: 14,
+        day: 23,
+        evening: 13
+    }
+]
+console.log(weather)
