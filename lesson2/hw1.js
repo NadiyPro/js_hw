@@ -45,28 +45,46 @@ let book1_1 = {
     title: 'Go where it\'s scary. That is where you will find strength',
     pageCount: 382,
     genre: 'Self development',
-    authors:{
+    authors:[
+        {
         name: 'Jim Lawless',
         age: 57
-    }
+        },
+        {
+            name: 'Jim Jim',
+            age: 60
+        }
+    ]
 }
 let book2_2 = {
     title: 'Develop your brain',
     pageCount: 536,
     genre: 'Self development',
-    authors:{
+    authors:[
+        {
         name: 'Joe Dispenza',
         age: 62
-    }
+        },
+        {
+            name: 'Dispenza Dispenza',
+            age: 57
+        }
+        ]
 }
 let book3_3 = {
     title: 'The monk who sold his Ferrari',
     pageCount: 254,
     genre: 'Self development',
-    authors:{
+    authors:[
+        {
         name: 'Robin Sharma',
         age: 59
-    }
+        },
+        {
+            name: 'Robin Robin',
+            age: 53
+        }
+        ]
 }
 console.log(book1_1,book2_2,book3_3);
 
@@ -180,4 +198,4 @@ let weather = [
         evening: 13
     }
 ]
-console.log(weather)
+console.log(weather);

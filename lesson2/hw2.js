@@ -86,7 +86,7 @@ if(!xx){
     console.log('default');
 }
 // // варіант рішення 2
-let xxx = null;
+let xxx = false;
 xxx = xxx || 'default';
 console.log(xxx);
 
