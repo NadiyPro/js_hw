@@ -56,6 +56,8 @@ switch (schedule){
     case 7:
         console.log('Sunday');
         break;
+    default:
+        console.log('???');
 }
 // // - Користувач вводить або має два числа.
 // //     Потрібно знайти та вивести максимальне число з тих двох .
