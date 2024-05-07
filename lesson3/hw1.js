@@ -1,5 +1,4 @@
 
-// // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 // // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 // // - Використовуючи данні з масиву, за допомоги document.write та циклу
 // // побудувати структуру по шаблону
@@ -95,6 +94,40 @@ while (i<20){
     document.write(
         `
        <div><h1>${hText}</h1></div>
+        `
+    );
+    i++;
+}
+// // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+let hIndex = [
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.',
+    'Lorem ipsum dolor sit amet, consectetur.'
+]
+let i=0;
+while (i<20){
+    let hTextIndex = hIndex[i];
+    document.write(
+        `
+       <div><h1>${i} ${hTextIndex}</h1></div>
         `
     );
     i++;
