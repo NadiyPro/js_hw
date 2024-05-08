@@ -135,4 +135,37 @@ for ( let i=0; i<usersWithId.length; i++) {
         } usersWithCities = usersWithId;
     }
 } console.log(usersWithCities);
-
+// // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+let pair = [ 1,2,3,4,5,6,7,8,9,10];
+for (let i=0; i < pair.length; i ++){
+    if(pair[i] % 2===0){
+        console.log(pair[i]);
+    }
+}
+// // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+let arrayNumber = [ 11,12,13,14,15,16,17,18,19,20];
+let arrayEmpty = [];
+for (arrayEmpty of arrayNumber) {
+    console.log(arrayEmpty);
+}
+// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+let arrayFor = [ 'a', 'b', 'c'];
+let text = '';
+for (let i=0; i<arrayFor.length; i++){
+    text += arrayFor[i];
+} console.log(text);
+// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+let arrayWhile = [ 'a', 'b', 'c'];
+let textWhile = '';
+let j=0;
+while ( j<arrayWhile.length){
+    textWhile += arrayWhile[j];
+    j++;
+} console.log(textWhile);
+// // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+let arrayForOf = [ 'a', 'b', 'c'];
+let textForOf = '';
+for (let k of arrayForOf){
+    textForOf += k;
+} console.log(textForOf);
+// //
