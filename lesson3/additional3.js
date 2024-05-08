@@ -47,7 +47,7 @@ for (let i=0; i < emptyArray.length; i += 3){
 // // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 let EXAMPLE = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
-for (i=0;i < EXAMPLE.length;i++){
+for (let i=0;i < EXAMPLE.length;i++){
     if((EXAMPLE[i+1]) % 2===0){
         console.log(EXAMPLE[i]);
     }
@@ -56,7 +56,7 @@ for (i=0;i < EXAMPLE.length;i++){
 let price = [100,250,50,168,120,345,188];
 let sum = 0;
 let avr = 0;
-for (i=0;i < price.length;i++){
+for (let i=0;i < price.length;i++){
     sum += price[i];
     avr = sum / price.length;
 }
@@ -64,9 +64,18 @@ console.log(avr);
 // // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
 let randomValue = [ ];
 let arrayMultiply = [ ];
-for(i=0;i < 20;i++){
+for(let i=0;i < 20;i++){
     randomValue[randomValue.length] = Math.floor(Math.random()*100);
-    arrayMultiply[randomValue.length] = randomValue[i] *5;
+    arrayMultiply[arrayMultiply.length] = randomValue[i] *5;
     console.log(arrayMultiply);
 }
 // // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
+let otherValue = ['js', 3, true,'html',13,23];
+let numberArray = [];
+for (let i=0; i<otherValue.length;i++){
+    if(+otherValue[i]&&otherValue[i]!==!!otherValue[i]){
+        numberArray[numberArray.length] = otherValue[i];
+        console.log(numberArray);
+    }
+}
+
