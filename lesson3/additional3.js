@@ -6,26 +6,27 @@ let emptyArray = [
 for (let i=0; i < 50; i++){
     if(i % 2===0){
         emptyArray[emptyArray.length] = i;
-        console.log(emptyArray);
     }
 }
+console.log(emptyArray);
 // //b. заповнити його 50 непарними числами за допомоги циклу.
 for (let i=0; i < 50; i++){
     if(i % 2!==0){
         emptyArray[emptyArray.length]= i;
-        console.log(emptyArray);
     }
 }
+console.log(emptyArray);
 //  //c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 for (let i=0; i < 20; i++){
     emptyArray[emptyArray.length] = Math.floor(Math.random()*100);
-        console.log(emptyArray);
+
     }
+console.log(emptyArray);
 // // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 for (let i=0; i < 20; i++){
     emptyArray[emptyArray.length] = Math.floor(Math.random()*732)+8;
-    console.log(emptyArray);
 }
+console.log(emptyArray);
 // // 2. Вивести за допомогою console.log кожен третій елемен
 for (let i=0; i < emptyArray.length; i += 3){
     console.log(emptyArray[i]);
@@ -41,9 +42,10 @@ let empty =[ ];
 for (let i=0; i < emptyArray.length; i += 3){
     if(emptyArray[i] % 2===0){
         empty[empty.length] = emptyArray[i];
-        console.log(empty);
+
     }
 }
+console.log(empty);
 // // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 let EXAMPLE = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
@@ -67,15 +69,67 @@ let arrayMultiply = [ ];
 for(let i=0;i < 20;i++){
     randomValue[randomValue.length] = Math.floor(Math.random()*100);
     arrayMultiply[arrayMultiply.length] = randomValue[i] *5;
-    console.log(arrayMultiply);
 }
+console.log(arrayMultiply);
 // // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 let otherValue = ['js', 3, true,'html',13,23];
 let numberArray = [];
 for (let i=0; i<otherValue.length;i++){
     if(+otherValue[i]&&otherValue[i]!==!!otherValue[i]){
         numberArray[numberArray.length] = otherValue[i];
-        console.log(numberArray);
     }
 }
+console.log(numberArray);
+// // - Дано 2 масиви з рівною кількістю об'єктів.
+// // Масиви:
+// //     let usersWithId = [
+// //         {id: 1, name: 'vasya', age: 31, status: false},
+// //         {id: 2, name: 'petya', age: 30, status: true},
+// //         {id: 3, name: 'kolya', age: 29, status: true},
+// //         {id: 4, name: 'olya', age: 28, status: false}
+// //     ];
+// //
+// // let citiesWithId = [
+// //     {user_id: 3, country: 'USA', city: 'Portland'},
+// //     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+// //     {user_id: 2, country: 'Poland', city: 'Krakow'},
+// //     {user_id: 4, country: 'USA', city: 'Miami'}
+// // ];
+// //
+// // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// //     Записати цей об'єкт в новий масив
+// // Example:
+// //     let usersWithCities = [
+// //         {
+// //             id: 1, // <===
+// //             name: 'vasya',
+// //             age: 31,
+// //             status: false,
+// //             address: {
+// //                 user_id: 1, // <===
+// //                 country: 'Ukraine',
+// //                 city: 'Ternopil'
+// //             }
+// //         },
+// //         // TO BE CONTINUED .....
+// //     ]
 
+// let usersWithId = [
+//     {id: 1, name: 'vasya', age: 31, status: false},
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 3, name: 'kolya', age: 29, status: true},
+//     {id: 4, name: 'olya', age: 28, status: false}
+// ];
+//
+// let citiesWithId = [
+//     {user_id: 3, country: 'USA', city: 'Portland'},
+//     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+//     {user_id: 2, country: 'Poland', city: 'Krakow'},
+//     {user_id: 4, country: 'USA', city: 'Miami'}
+// ];
+// let usersWithCities = [];
+
+// for (let i;i<usersWithId.length;i++){
+//     usersWithCities[usersWithCities.length] = usersWithId[i];
+//     console.log(usersWithCities);
+// }
