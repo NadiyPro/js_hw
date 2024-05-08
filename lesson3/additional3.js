@@ -128,27 +128,24 @@ let citiesWithId = [
     {user_id: 4, country: 'USA', city: 'Miami'}
 ];
  let usersWithCities = [];
-
-// for (usersWithCities of usersWithId){
-//     usersWithCities.address = true;
-//     console.log(usersWithCities)
-// }
-// for (usersWithCities of citiesWithId){
-//         if (usersWithCities.id===citiesWithId.user_id){
-//             usersWithCities.address = citiesWithId;
-//             console.log(usersWithCities);
-//         }
-//     }
-for ( usersWithCities of usersWithId){
-    usersWithCities.address = {};
-    console.log(usersWithCities);
-}
-for ( usersWithCities in citiesWithId){
-    if(usersWithCities.id===citiesWithId.user_id){
-        console.log(usersWithCities);
+for ( let i=0; i<usersWithId.length; i++) {
+    for (let j = 0; j < citiesWithId.length; j++) {
+        if (usersWithId[i].id === citiesWithId[j].user_id) {
+            usersWithId[i].adress = citiesWithId[j];
+            console.log(usersWithId[i]);
+        }
     }
-
 }
 
-
-
+// for ( let i=0; i<usersWithId.length;i++){
+//     for ( let j=0; j<citiesWithId.length;j++){
+//         if(usersWithId[j].id === citiesWithId[j].user_id){
+//             let newAdress = {
+//                 user_id:citiesWithId[j].user_id,
+//                 country:citiesWithId[j].country,
+//                 city:citiesWithId[j].city
+//             }; usersWithCities.push(newAdress);
+//         }
+//
+//     }
+// }  console.log(usersWithCities);
