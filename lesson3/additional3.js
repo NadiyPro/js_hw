@@ -127,9 +127,28 @@ let citiesWithId = [
     {user_id: 2, country: 'Poland', city: 'Krakow'},
     {user_id: 4, country: 'USA', city: 'Miami'}
 ];
-let usersWithCities = [];
+ let usersWithCities = [];
 
-for (usersWithCities of usersWithId){
-    usersWithCities.address = true;
-    console.log(usersWithCities)
+// for (usersWithCities of usersWithId){
+//     usersWithCities.address = true;
+//     console.log(usersWithCities)
+// }
+// for (usersWithCities of citiesWithId){
+//         if (usersWithCities.id===citiesWithId.user_id){
+//             usersWithCities.address = citiesWithId;
+//             console.log(usersWithCities);
+//         }
+//     }
+for ( usersWithCities of usersWithId){
+    usersWithCities.address = {};
+    console.log(usersWithCities);
 }
+for ( usersWithCities in citiesWithId){
+    if(usersWithCities.id===citiesWithId.user_id){
+        console.log(usersWithCities);
+    }
+
+}
+
+
+
