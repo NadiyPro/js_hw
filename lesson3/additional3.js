@@ -132,10 +132,9 @@ for ( let i=0; i<usersWithId.length; i++) {
     for (let j = 0; j < citiesWithId.length; j++) {
         if (usersWithId[i].id === citiesWithId[j].user_id) {
             usersWithId[i].adress = citiesWithId[j];
-            console.log(usersWithId[i]);
-        }
+        } usersWithCities = usersWithId;
     }
-}
+} console.log(usersWithCities);
 
 // for ( let i=0; i<usersWithId.length;i++){
 //     for ( let j=0; j<citiesWithId.length;j++){
