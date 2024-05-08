@@ -136,15 +136,3 @@ for ( let i=0; i<usersWithId.length; i++) {
     }
 } console.log(usersWithCities);
 
-// for ( let i=0; i<usersWithId.length;i++){
-//     for ( let j=0; j<citiesWithId.length;j++){
-//         if(usersWithId[j].id === citiesWithId[j].user_id){
-//             let newAdress = {
-//                 user_id:citiesWithId[j].user_id,
-//                 country:citiesWithId[j].country,
-//                 city:citiesWithId[j].city
-//             }; usersWithCities.push(newAdress);
-//         }
-//
-//     }
-// }  console.log(usersWithCities);
