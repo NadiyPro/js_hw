@@ -59,4 +59,19 @@ function listCount (textCount,count) {
 }
 listCount('Lorem ipsum dolor sit amet',3);
 
+// // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+let Value = ['html',true,100,'js',true,100500];
+function primitiveArr (...primitiveValue) {
+    document.write ('<div><ul>')
+    for (let i=0;i<primitiveArr.length;i++){
 
+        document.write(
+            `
+            <li>${primitiveValue}</li>
+            `
+        )
+    }
+    document.write ('</ul></div>')
+}
+primitiveArr();
+// цикл в цикле достать сначала с масива все значения и потом их записать в ли
