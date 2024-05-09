@@ -60,7 +60,7 @@ function listCount (textCount,count) {
 listCount('Lorem ipsum dolor sit amet',3);
 
 // // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-let Value = ['html',true,100,'js',true,100500];
+// let Value = ['html',true,100,'js',true,100500];
 function primitiveArr (...primitiveValue) {
     document.write ('<div><ul>')
     for (let i=0;i<primitiveArr.length;i++){
