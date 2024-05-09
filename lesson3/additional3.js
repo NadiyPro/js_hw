@@ -129,10 +129,10 @@ for ( let i=0; i<usersWithId.length; i++) {
     for (let j = 0; j < citiesWithId.length; j++) {
         if (usersWithId[i].id === citiesWithId[j].user_id) {
             usersWithId[i].adress = citiesWithId[j];
+            usersWithCities[usersWithCities.length] = usersWithId;
         }
     }
 }
-usersWithCities[usersWithCities.length] = usersWithId;
 console.log(usersWithCities);
 // // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 let pair = [ 1,2,3,4,5,6,7,8,9,10];
