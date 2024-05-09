@@ -1,7 +1,5 @@
 // // 1. Створити пустий масив та :
-let emptyArray = [
-
-];
+let emptyArray = [];
 // //a. заповнити його 50 парними числами за допомоги циклу.
 for (let i=0; i < 50; i++){
     if(i % 2===0){
@@ -19,7 +17,6 @@ console.log(emptyArray);
 //  //c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 for (let i=0; i < 20; i++){
     emptyArray[emptyArray.length] = Math.floor(Math.random()*100);
-
     }
 console.log(emptyArray);
 // // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
@@ -132,9 +129,11 @@ for ( let i=0; i<usersWithId.length; i++) {
     for (let j = 0; j < citiesWithId.length; j++) {
         if (usersWithId[i].id === citiesWithId[j].user_id) {
             usersWithId[i].adress = citiesWithId[j];
-        } usersWithCities = usersWithId;
+        }
     }
-} console.log(usersWithCities);
+}
+usersWithCities[usersWithCities.length] = usersWithId;
+console.log(usersWithCities);
 // // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 let pair = [ 1,2,3,4,5,6,7,8,9,10];
 for (let i=0; i < pair.length; i ++){
@@ -145,9 +144,10 @@ for (let i=0; i < pair.length; i ++){
 // // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 let arrayNumber = [ 11,12,13,14,15,16,17,18,19,20];
 let arrayEmpty = [];
-for (arrayEmpty of arrayNumber) {
-    console.log(arrayEmpty);
+for (let i=0;i<arrayNumber.length; i++){
+    arrayEmpty[arrayEmpty.length] = arrayNumber[i];
 }
+console.log(arrayEmpty);
 // // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 let arrayFor = [ 'a', 'b', 'c'];
 let text = '';
