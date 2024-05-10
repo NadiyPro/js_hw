@@ -157,8 +157,9 @@ let currencyValues = [
 ];
 function exchange(sumUAH,currencyValues,exchangeCurrency){
     for (let i=0; i<currencyValues.length;i++){
+        // console.log(currencyValues[i]);
         if(currencyValues[i].currency===exchangeCurrency){
-          let sumVal = sumUAH / currencyValues[i].value;
+             let sumVal = sumUAH / currencyValues[i].value;
           return  console.log (sumVal);
         }
         }
