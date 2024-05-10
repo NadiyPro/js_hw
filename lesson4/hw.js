@@ -61,7 +61,7 @@ listCount('Lorem ipsum dolor sit amet',3);
 
 // // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 let arrValue = ['html',true,100,'js',true,100500];
-function primitiveArr (...primitiveValue) {
+function primitiveArr (primitiveValue) {
     document.write('<div><ul>')
     for (let i=0;i<primitiveValue.length;i++) {
         document.write(
@@ -72,7 +72,7 @@ function primitiveArr (...primitiveValue) {
     }
     }
     document.write ('</ul></div>')
-primitiveArr(...arrValue);
+primitiveArr(arrValue);
 // // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age, та виводить їх в документ. Для кожного об'єкту окремий блок.
 let objectItems = [
     {
