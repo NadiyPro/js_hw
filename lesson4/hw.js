@@ -47,7 +47,7 @@ list('Lorem ipsum dolor sit amet');
 // // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
 // // Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 function listCount (textCount,count) {
-    document.write (' <div><ul>')
+    document.write (`<div><ul>`)
     for (let i=0;i<count;i++){
         document.write(
             `
@@ -55,14 +55,14 @@ function listCount (textCount,count) {
             `
         )
     }
-    document.write ('</ul></div>')
+    document.write (`</ul></div>`)
 }
 listCount('Lorem ipsum dolor sit amet',3);
 
 // // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 let arrValue = ['html',true,100,'js',true,100500];
 function primitiveArr (primitiveValue) {
-    document.write('<div><ul>')
+    document.write(`<div><ul>`)
     for (let i=0;i<primitiveValue.length;i++) {
         document.write(
             `
@@ -71,7 +71,7 @@ function primitiveArr (primitiveValue) {
         )
     }
     }
-    document.write ('</ul></div>')
+    document.write (`</ul></div>`)
 primitiveArr(arrValue);
 // // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age, та виводить їх в документ. Для кожного об'єкту окремий блок.
 let objectItems = [
