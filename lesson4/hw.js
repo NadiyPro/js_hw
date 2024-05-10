@@ -103,3 +103,38 @@ function iterator (objectValue){
     }
 }
 iterator(objectItems);
+// // - створити функцію яка повертає найменьше число з масиву
+let arrNumber = [111,777,18,3,67,23,13,55];
+// //варіант 1
+function minNum1 (valueMin1){
+    return console.log (Math.min(...valueMin1));
+ }
+
+minNum1(arrNumber);
+// // варіант 2
+function minNum2 (valueMin2){
+    let min = valueMin2 [0];
+    for(let i=0;i<valueMin2.length;i++){
+        if(valueMin2[i]< min){
+            min = valueMin2[i];
+        }
+    }
+    return console.log (min);
+}
+minNum2(arrNumber);
+// // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+let sumArr = [1,2,10,13,5];
+function sum (valueSum){
+    let sumResult = 0;
+    for(let i=0;i<valueSum.length;i++){
+        sumResult += valueSum[i];
+    }
+    return console.log (sumResult);
+}
+sum(sumArr)
+// // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+// // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+// let swapArr = [11,22,33,44];
+function swap(arr,index1,index2){
+
+}
