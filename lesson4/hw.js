@@ -145,3 +145,22 @@ function swap(arrSwap,index1,index2){
 console.log(swap(arrSwap,1,3));
 // // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
+let currencyValues = [
+    {
+        currency: 'USD',
+        value: 40
+    },
+    {
+        currency: 'EUR',
+        value: 42
+    }
+];
+function exchange(sumUAH,currencyValues,exchangeCurrency){
+    for (let i=0; i<currencyValues.length;i++){
+        if(currencyValues[i].currency===exchangeCurrency){
+          let sumVal = sumUAH / currencyValues[i].value;
+          return  console.log (sumVal);
+        }
+        }
+    }
+exchange(10000,currencyValues,'USD')
