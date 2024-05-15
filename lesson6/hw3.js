@@ -13,11 +13,18 @@
 
 let cardSuit = ['spade', 'diamond','heart', 'clubs'];
 let value = ['6','7','8','9','10','ace','jack','queen','king'];
-let color = ['red','black'];
-let cards = value.concat(cardSuit); //value.concat(cardSuit); //value.forEach (item => value.concat(cardSuit));
-// let cards = cardSuit.reduce((acc,index) =>{ if (acc.){
-//
-// }},[[],[]])
-console.log (cards)
+ let color = ['red','black'];
+let cardColumn=cardSuit.reduce((acc,card)=>{
+    value.forEach(item=> {if(card==='spade' || card==='heart'){color='red'}else {color='black'}
+        acc.push({
+                cardSuit: item,
+                value: card,
+                color: color
+            }
+        )
+    })
+    return acc;
+},[])
+console.log(cardColumn)
 
 
