@@ -10,15 +10,16 @@
 // //     color:'', // 'red','black'
 // // }
 
-
 let cardSuit = ['spade', 'diamond','heart', 'clubs'];
 let value = ['6','7','8','9','10','ace','jack','queen','king'];
- let color = ['red','black'];
-let cardColumn=cardSuit.reduce((acc,card)=>{
-    value.forEach(item=> {if(card==='spade' || card==='heart'){color='red'}else {color='black'}
+let color = ['red','black'];
+
+let cardColumn=cardSuit.reduce((acc,suit)=>{
+    value.forEach(item=>
+    {if(suit==='spade' || suit==='heart'){color='red'}else {color='black'}
         acc.push({
-                cardSuit: item,
-                value: card,
+                cardSuit: suit,
+                value: item,
                 color: color
             }
         )
@@ -26,5 +27,3 @@ let cardColumn=cardSuit.reduce((acc,card)=>{
     return acc;
 },[])
 console.log(cardColumn)
-
-
