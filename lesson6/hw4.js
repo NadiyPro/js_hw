@@ -20,3 +20,8 @@ let cardColumn=cardSuit.reduce((acc,suit)=>{
     return acc;
 },[])
 console.log(cardColumn);
+//
+let cards=cardColumn.reduce((acc,suit)=>{acc[suit.cardSuit].push(suit);
+        return acc;
+    }, {spade:[],diamond:[],heart:[],club:[]})
+console.log(cards);
