@@ -91,16 +91,6 @@ function Cars (model,make,year,speed,engineCapacity){
             this.year = newValue;
             console.log(newValue)
         };
-        this.addDriver=function (name,age,experience){
-            this.name=name;
-            this.age=age;
-            this.experience=experience;
-            for (const driver in this) {
-                if (typeof this[driver] === 'function') continue;
-                let valueD = this[driver];
-                console.log(driver, valueD)
-            }
-        };
 
 
 }
@@ -111,8 +101,33 @@ car.info()
 car.increaseMaxSpeed(300)
 car.changeYear(2015)
 car.info()
+
+// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+Cars.prototype.addDriver = function (name,age,experience){
+    this.name=name;
+    this.age=age;
+    this.experience=experience;
+    for (const driver in this) {
+        if (typeof this[driver] === 'function') continue;
+        let valueD = this[driver];
+        console.log(driver, valueD)
+    }
+};
+car.addDriver()
 car.addDriver('Sergey', 34, 2)
-// car.info({name: 'Sergey', age: 34, experience: 2})
+console.log(car)
 
 
-// addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+
+// this.addDriver=function (name,age,experience){
+//     this.name=name;
+//     this.age=age;
+//     this.experience=experience;
+//     for (const driver in this) {
+//         if (typeof this[driver] === 'function') continue;
+//         let valueD = this[driver];
+//         console.log(driver, valueD)
+//     }
+// };
+
