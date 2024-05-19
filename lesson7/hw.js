@@ -192,7 +192,6 @@ console.log(arrayCinderella);
 // // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 // //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 // //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-// debugger;
 class Pince{
     constructor(shoes,namePince,agePince) {
         this.shoes=shoes;
@@ -202,4 +201,14 @@ class Pince{
 }
 let pince = new Pince (35,'Nick',25);
 console.log(pince)
-let cinderellaName =
+// debugger;
+let cinderellaName = function () {
+    for(let i=0;i<arrayCinderella.length;i++){
+       let miniLegs = arrayCinderella[0].legsCinderella;
+       if(miniLegs>arrayCinderella[i].legsCinderella){
+           miniLegs=arrayCinderella[i].legsCinderella;
+           console.log(miniLegs)
+       }
+    }
+}
+cinderellaName()
