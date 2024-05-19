@@ -3,7 +3,7 @@
 function User (id,name,surname,email,phone) {
         this.id= id;
         this.name= name;
-        this.surname= surname;
+        this.surname = surname;
         this.email= email;
         this.phone= phone;
     }
@@ -20,6 +20,43 @@ let user9 = new User(9, 'masha','Reichert','Chaim_McDermott@dana.io','3806366325
 let user10 = new User(10, 'olya','DuBuqu','Rey.Padberg@karina.biz','380636632519');
 newUser.push(user1,user2,user3,user4,user5,user6,user7,user8,user9,user10);
 console.log(newUser)
+// // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+//
+debugger;
+// let idFilter = newUser.filter(iter=>{
+//     for(let value in iter){
+//         if(value.id % 2===0){
+//             console.log(idFilter)
+//         }
+//     }
+// })
 
+let idFilter = newUser.filter(iter=>{
+    for(let value in iter){
+        for(let valueId in value){
+            if(valueId.id % 2===0){
+                console.log(idFilter)
+            }
+        }
+    }
+})
 
+// User.prototype.idFilter = newUser.filter(iter=>{
+//         for(let value in iter){
+//             for(let valueId in value)
+//             if(value.id % 2===0){
+//                 console.log(valueId)
+//             }
+//         }
+//     })
+
+// User.prototype.idFilter = newUser.filter(iter=>{
+//     for(let i;i<iter.length;i++){
+//             // if(value.id % 2===0){
+//             //     value[id] = iter.id;
+//                 console.log(iter)
+//             }
+//     }
+// )
+// console.log(idFilter)
 
