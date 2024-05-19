@@ -4,8 +4,8 @@ function User (id,name,surname,email,phone) {
         this.id= id;
         this.name= name;
         this.surname = surname;
-        this.email= email;
-        this.phone= phone;
+        this.email = email;
+        this.phone = phone;
     }
 let newUser = [];
 let user1 = new User(1, 'vasya','Graham','Sincere@april.biz','380636632510');
