@@ -56,17 +56,6 @@ console.log(clients);
 let clientsSort = clients.toSorted((client1,client2)=>client1.order.length-client2.order.length);
 console.log(clientsSort);
 // // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-// // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// // -- changeYear (newValue) - змінює рік випуску на значення newValue
-// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-
-// let ccc = [
-//     {model: 'Camry', make: 'Toyota', year: 2024, speed: 210, engineCapacity: 2487},
-//     {make: 'Jeep', model: 'Wrangler', year: 2022, speed: 180 , engineCapacity: 1995},
-//     {make: 'Honda', model: 'Civic', year: 2021, speed: 180, engineCapacity: 1993}
-// ];
 function Cars (model,make,year,speed,engineCapacity){
         this.model= model;
         this.make= make;
@@ -96,12 +85,15 @@ function Cars (model,make,year,speed,engineCapacity){
 }
 let car = new Cars ('Camry','Toyota',2024,210,2487);
 console.log(car)
+// // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 car.drive()
+// // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 car.info()
+// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 car.increaseMaxSpeed(300)
+// // -- changeYear (newValue) - змінює рік випуску на значення newValue
 car.changeYear(2015)
 car.info()
-
 // // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 Cars.prototype.addDriver = function (name,age,experience){
     this.name=name;
@@ -116,18 +108,3 @@ Cars.prototype.addDriver = function (name,age,experience){
 car.addDriver()
 car.addDriver('Sergey', 34, 2)
 console.log(car)
-
-
-
-
-// this.addDriver=function (name,age,experience){
-//     this.name=name;
-//     this.age=age;
-//     this.experience=experience;
-//     for (const driver in this) {
-//         if (typeof this[driver] === 'function') continue;
-//         let valueD = this[driver];
-//         console.log(driver, valueD)
-//     }
-// };
-
