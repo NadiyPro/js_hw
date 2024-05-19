@@ -62,8 +62,31 @@ console.log(clientsSort);
 // // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-let cars = [
-    {model: "Camry", make: "Toyota", year: 2024, speed: 210, engineCapacity: 2487},
-    {make: "Jeep", model: "Wrangler", year: 2022, speed: 180 , engineCapacity: 1995},
-    {make: "Honda", model: "Civic", year: 2021, speed: 180, engineCapacity: 1993}
+let ccc = [
+    {model: 'Camry', make: 'Toyota', year: 2024, speed: 210, engineCapacity: 2487},
+    {make: 'Jeep', model: 'Wrangler', year: 2022, speed: 180 , engineCapacity: 1995},
+    {make: 'Honda', model: 'Civic', year: 2021, speed: 180, engineCapacity: 1993}
 ];
+function Cars (model,make,year,speed,engineCapacity){
+        this.model= model;
+        this.make= make;
+        this.year= year;
+        this.speed= speed;
+        this.engineCapacity= engineCapacity;
+        this.drive=function (){
+            console.log(`їдемо зі швидкістю ${this.speed} на годину`)
+        };
+    this.info=function (){
+        for(const item in this){
+            if(typeof this[item] === 'function') continue;
+            let valueE = this[item];
+            console.log(item, valueE)
+        }
+
+    }
+
+}
+let car = new Cars ('Camry','Toyota',2024,210,2487);
+console.log(car)
+car.drive()
+car.info()
