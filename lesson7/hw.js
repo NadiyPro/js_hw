@@ -21,10 +21,14 @@ let user10 = new User(10, 'olya','DuBuqu','Rey.Padberg@karina.biz','380636632519
 newUser.push(user1,user2,user3,user4,user5,user6,user7,user8,user9,user10);
 console.log(newUser)
 // // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
-let idFilter = newUser.filter(iter=>{
+let idUser = newUser.filter(iter=>{
         if(iter.id % 2===0){
             return iter;
         }
 });
-console.log(idFilter)
-
+console.log(idUser);
+// // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+let sortUser= newUser.toSorted((iter1,iter2)=>iter1.id-iter2.id);
+console.log(sortUser);
+// // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// // створити пустий масив, наповнити його 10 об'єктами Client
