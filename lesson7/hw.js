@@ -62,11 +62,11 @@ console.log(clientsSort);
 // // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-let ccc = [
-    {model: 'Camry', make: 'Toyota', year: 2024, speed: 210, engineCapacity: 2487},
-    {make: 'Jeep', model: 'Wrangler', year: 2022, speed: 180 , engineCapacity: 1995},
-    {make: 'Honda', model: 'Civic', year: 2021, speed: 180, engineCapacity: 1993}
-];
+// let ccc = [
+//     {model: 'Camry', make: 'Toyota', year: 2024, speed: 210, engineCapacity: 2487},
+//     {make: 'Jeep', model: 'Wrangler', year: 2022, speed: 180 , engineCapacity: 1995},
+//     {make: 'Honda', model: 'Civic', year: 2021, speed: 180, engineCapacity: 1993}
+// ];
 function Cars (model,make,year,speed,engineCapacity){
         this.model= model;
         this.make= make;
@@ -76,17 +76,43 @@ function Cars (model,make,year,speed,engineCapacity){
         this.drive=function (){
             console.log(`їдемо зі швидкістю ${this.speed} на годину`)
         };
-    this.info=function (){
-        for(const item in this){
-            if(typeof this[item] === 'function') continue;
-            let valueE = this[item];
-            console.log(item, valueE)
-        }
+         this.info=function () {
+             for (const item in this) {
+                 if (typeof this[item] === 'function') continue;
+                 let valueE = this[item];
+                 console.log(item, valueE)
+             }
+         };
+        this.increaseMaxSpeed=function (newSpeed){
+            newSpeed += this.speed;
+            console.log(newSpeed)
+        };
+        this.changeYear=function (newValue){
+            this.year = newValue;
+            console.log(newValue)
+        };
+        this.addDriver=function (name,age,experience){
+            this.name=name;
+            this.age=age;
+            this.experience=experience;
+            for (const driver in this) {
+                if (typeof this[driver] === 'function') continue;
+                let valueD = this[driver];
+                console.log(driver, valueD)
+            }
+        };
 
-    }
 
 }
 let car = new Cars ('Camry','Toyota',2024,210,2487);
 console.log(car)
 car.drive()
 car.info()
+car.increaseMaxSpeed(300)
+car.changeYear(2015)
+car.info()
+car.addDriver('Sergey', 34, 2)
+// car.info({name: 'Sergey', age: 34, experience: 2})
+
+
+// addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
