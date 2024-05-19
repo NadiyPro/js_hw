@@ -202,10 +202,10 @@ class Pince{
 let pince = new Pince (35,'Nick',25);
 console.log(pince)
 // debugger;
-
 let cinderellaName = function () {
+    let miniLegs = 0;
     for(let i=0;i<arrayCinderella.length;i++){
-        let miniLegs = arrayCinderella[0].legsCinderella;
+        miniLegs = arrayCinderella[0].legsCinderella;
         if(miniLegs>arrayCinderella[i].legsCinderella){
             miniLegs = arrayCinderella[i]
             console.log(miniLegs)
@@ -213,54 +213,7 @@ let cinderellaName = function () {
         }
 }
 cinderellaName()
+console.log(arrayCinderella.find(miniLegsFind=>Math.min(miniLegsFind.legsCinderella)));
 
-// let cinderellaName = function () {
-//     for(let i=0;i<arrayCinderella.length;i++){
-//         let miniLegs = arrayCinderella[0].legsCinderella;
-//        if(miniLegs>arrayCinderella[i].legsCinderella){
-//            miniLegs=arrayCinderella[i].legsCinderella;
-//            console.log(miniLegs)
-//        }
-//     }
-// }
-// cinderellaName()
-// let cinderellaName = function () {
-//     for(let i=0;i<arrayCinderella.length;i++){
-//         let miniLegs = arrayCinderella[0].legsCinderella;
-//         if(miniLegs>arrayCinderella[i].legsCinderella){
-//             miniLegs=arrayCinderella[i].legsCinderella;
-//             console.log(miniLegs)
-//         }
-//     }
-// }
-// cinderellaName()
 
-// let cinderellaName = function () {
-//     for(let i=0;i<arrayCinderella.length;++i){
-//         let miniLegs = arrayCinderella[0].legsCinderella;
-//         if(miniLegs>arrayCinderella[i].legsCinderella){
-//             arrayCinderella[0].legsCinderella=arrayCinderella[i].legsCinderella;
-//             miniLegs=arrayCinderella[0].legsCinderella;
-//             console.log(miniLegs)
-//         }
-//     }
-// }
-// cinderellaName()
-
-// for (i = 0; i < myArray.length; ++i)
-//     if (myArray[i] > myArray[i + 1]) max = myArray[i];
-//     else min = myArray[i];
-
-// function minNum1 (valueMin1){
-//     return console.log (Math.min(...valueMin1));
-// }
-
-// let minNum2 = (valueMin2) =>{
-//     let min = valueMin2 [0];
-//     for(let i=0;i<valueMin2.length;i++){
-//         if(valueMin2[i]< min){
-//             min = valueMin2[i];
-//         }
-//     }
-//     return console.log (min);
 
