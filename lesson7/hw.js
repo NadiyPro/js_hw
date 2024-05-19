@@ -204,7 +204,7 @@ console.log(pince)
 // debugger;
 let cinderellaName = function () {
     for(let i=0;i<arrayCinderella.length;i++){
-       let miniLegs = arrayCinderella[0].legsCinderella;
+        let miniLegs = arrayCinderella[0].legsCinderella;
        if(miniLegs>arrayCinderella[i].legsCinderella){
            miniLegs=arrayCinderella[i].legsCinderella;
            console.log(miniLegs)
@@ -212,3 +212,18 @@ let cinderellaName = function () {
     }
 }
 cinderellaName()
+
+
+// function minNum1 (valueMin1){
+//     return console.log (Math.min(...valueMin1));
+// }
+
+// let minNum2 = (valueMin2) =>{
+//     let min = valueMin2 [0];
+//     for(let i=0;i<valueMin2.length;i++){
+//         if(valueMin2[i]< min){
+//             min = valueMin2[i];
+//         }
+//     }
+//     return console.log (min);
+
