@@ -65,13 +65,16 @@ function Cars (model,make,year,speed,engineCapacity){
         this.drive=function (){
             console.log(`їдемо зі швидкістю ${this.speed} на годину`)
         };
-         this.info=function () {
-             for (const item in this) {
-                 if (typeof this[item] === 'function') continue;
-                 let valueE = this[item];
-                 console.log(item, valueE)
-             }
-         };
+    this.info=function () {
+        console.log(`model - ${this.model}; make - ${this.make}; year - ${this.year}; speed - ${this.speed}; engineCapacity - ${this.engineCapacity};`)
+    };
+         // this.info=function () {
+         //     for (const item in this) {
+         //         if (typeof this[item] === 'function') continue;
+         //         let valueE = this[item];
+         //         console.log(item, valueE)
+         //     }
+         // };
         this.increaseMaxSpeed=function (newSpeed){
             newSpeed += this.speed;
             console.log(newSpeed)
@@ -80,8 +83,6 @@ function Cars (model,make,year,speed,engineCapacity){
             this.year = newValue;
             console.log(newValue)
         };
-
-
 }
 let car = new Cars ('Camry','Toyota',2024,210,2487);
 console.log(car)
@@ -99,12 +100,14 @@ Cars.prototype.addDriver = function (name,age,experience){
     this.name=name;
     this.age=age;
     this.experience=experience;
-    for (const driver in this) {
-        if (typeof this[driver] === 'function') continue;
-        let valueD = this[driver];
-        console.log(driver, valueD)
-    }
+    console.log(`name - ${this.name}; age - ${this.age}; experience - ${this.experience};model - ${this.model}; make - ${this.make}; year - ${this.year}; speed - ${this.speed}; engineCapacity - ${this.engineCapacity};`)
+    // for (const driver in this) {
+    //     if (typeof this[driver] === 'function') continue;
+    //     let valueD = this[driver];
+    //     console.log(driver, valueD)
+    // }
 };
-car.addDriver()
 car.addDriver('Sergey', 34, 2)
 console.log(car)
+// // - (Те саме, тільки через клас)
+// // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
