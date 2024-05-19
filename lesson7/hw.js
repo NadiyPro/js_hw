@@ -1,3 +1,4 @@
+// // ************************** User ****************************** // //
 // // - Створити функцію конструктор для об'єктів User з полями id, name, surname, email, phone
 // // створити пустий масив, наповнити його 10 об'єктами new User(....)
 function User (id,name,surname,email,phone) {
@@ -55,6 +56,7 @@ console.log(clients);
 // // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 let clientsSort = clients.toSorted((client1,client2)=>client1.order.length-client2.order.length);
 console.log(clientsSort);
+// // ********************************************** Cars конструктор  ********************************************** // //
 // // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 function Cars1 (model,make,year,speed,engineCapacity){
         this.model= model;
@@ -109,7 +111,7 @@ Cars1.prototype.addDriver = function (name,age,experience){
 };
 car1.addDriver('Sergey', 34, 2)
 console.log(car1)
-// //*************************class****************************// //
+// // ************************* Cars class ****************************// //
 // // - (Те саме, тільки через клас)
 // // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 class Cars2 {
@@ -167,5 +169,37 @@ Cars2.prototype.addDriver = function (nameClass,ageClass,experienceClass){
 };
 car2.addDriver('Nadia', 33, 1)
 console.log(car2)
-
-
+// // ***************************** попелюшка / принц *********************************************// //
+// / -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+function Cinderella(nameCinderella, ageCinderella,legsCinderella){
+    this.nameCinderella=nameCinderella;
+    this.ageCinderella=ageCinderella;
+    this.legsCinderella=legsCinderella
+}
+let arrayCinderella=[];
+let Cinderella1=new Cinderella ('Olivia',18,38);
+let Cinderella2=new Cinderella ('Amelia',20,37);
+let Cinderella3=new Cinderella ('Isla',21,37);
+let Cinderella4=new Cinderella ('Ava',19,36);
+let Cinderella5=new Cinderella ('Ivy',21,35);
+let Cinderella6=new Cinderella ('Freya',20,38);
+let Cinderella7=new Cinderella ('Lily',18,39);
+let Cinderella8=new Cinderella ('Florence',19,37);
+let Cinderella9=new Cinderella ('Mia',20,36);
+let Cinderella10=new Cinderella ('Willow',18,38);
+arrayCinderella.push(Cinderella1,Cinderella2,Cinderella3,Cinderella4,Cinderella5,Cinderella6,Cinderella7,Cinderella8,Cinderella9,Cinderella10);
+console.log(arrayCinderella);
+// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// debugger;
+class Pince{
+    constructor(shoes,namePince,agePince) {
+        this.shoes=shoes;
+        this.namePince=namePince;
+        this.agePince=agePince;
+    }
+}
+let pince = new Pince (35,'Nick',25);
+console.log(pince)
+let cinderellaName =
