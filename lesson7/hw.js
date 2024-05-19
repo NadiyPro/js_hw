@@ -177,10 +177,10 @@ function Cinderella(nameCinderella, ageCinderella,legsCinderella){
     this.legsCinderella=legsCinderella
 }
 let arrayCinderella=[];
-let Cinderella1=new Cinderella ('Olivia',18,38);
+let Cinderella1=new Cinderella ('Olivia',18,36);
 let Cinderella2=new Cinderella ('Amelia',20,37);
 let Cinderella3=new Cinderella ('Isla',21,37);
-let Cinderella4=new Cinderella ('Ava',19,36);
+let Cinderella4=new Cinderella ('Ava',19,38);
 let Cinderella5=new Cinderella ('Ivy',21,35);
 let Cinderella6=new Cinderella ('Freya',20,38);
 let Cinderella7=new Cinderella ('Lily',18,39);
@@ -202,17 +202,54 @@ class Pince{
 let pince = new Pince (35,'Nick',25);
 console.log(pince)
 // debugger;
+
 let cinderellaName = function () {
     for(let i=0;i<arrayCinderella.length;i++){
         let miniLegs = arrayCinderella[0].legsCinderella;
-       if(miniLegs>arrayCinderella[i].legsCinderella){
-           miniLegs=arrayCinderella[i].legsCinderella;
-           console.log(miniLegs)
-       }
-    }
+        if(miniLegs>arrayCinderella[i].legsCinderella){
+            miniLegs = arrayCinderella[i]
+            console.log(miniLegs)
+            }
+        }
 }
 cinderellaName()
 
+// let cinderellaName = function () {
+//     for(let i=0;i<arrayCinderella.length;i++){
+//         let miniLegs = arrayCinderella[0].legsCinderella;
+//        if(miniLegs>arrayCinderella[i].legsCinderella){
+//            miniLegs=arrayCinderella[i].legsCinderella;
+//            console.log(miniLegs)
+//        }
+//     }
+// }
+// cinderellaName()
+// let cinderellaName = function () {
+//     for(let i=0;i<arrayCinderella.length;i++){
+//         let miniLegs = arrayCinderella[0].legsCinderella;
+//         if(miniLegs>arrayCinderella[i].legsCinderella){
+//             miniLegs=arrayCinderella[i].legsCinderella;
+//             console.log(miniLegs)
+//         }
+//     }
+// }
+// cinderellaName()
+
+// let cinderellaName = function () {
+//     for(let i=0;i<arrayCinderella.length;++i){
+//         let miniLegs = arrayCinderella[0].legsCinderella;
+//         if(miniLegs>arrayCinderella[i].legsCinderella){
+//             arrayCinderella[0].legsCinderella=arrayCinderella[i].legsCinderella;
+//             miniLegs=arrayCinderella[0].legsCinderella;
+//             console.log(miniLegs)
+//         }
+//     }
+// }
+// cinderellaName()
+
+// for (i = 0; i < myArray.length; ++i)
+//     if (myArray[i] > myArray[i + 1]) max = myArray[i];
+//     else min = myArray[i];
 
 // function minNum1 (valueMin1){
 //     return console.log (Math.min(...valueMin1));
