@@ -177,7 +177,7 @@ function Cinderella(nameCinderella, ageCinderella,legsCinderella){
     this.legsCinderella=legsCinderella
 }
 let arrayCinderella=[];
-let Cinderella1=new Cinderella ('Olivia',18,36);
+let Cinderella1=new Cinderella ('Olivia',18,38);
 let Cinderella2=new Cinderella ('Amelia',20,37);
 let Cinderella3=new Cinderella ('Isla',21,37);
 let Cinderella4=new Cinderella ('Ava',19,38);
@@ -212,10 +212,4 @@ cinderellaName()
 // //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 console.log(arrayCinderella.find(shoesFind=>pince.shoes===shoesFind.legsCinderella));
 // //     Додатково, знайти необхідну попелюшку за допомоги відповідного колбеку
-debugger;
-let cinderellaNameCallback = function (value,callback) {
-            return callback(value)
-}
-cinderellaNameCallback(pince.shoes,((iterI)=>iterI===arrayCinderella.legsCinderella))
-console.log(cinderellaNameCallback)
 
