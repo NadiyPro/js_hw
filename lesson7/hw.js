@@ -211,5 +211,13 @@ let cinderellaName = function () {
 cinderellaName()
 // //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 console.log(arrayCinderella.find(shoesFind=>pince.shoes===shoesFind.legsCinderella));
-
-
+// // Через Array.prototype. створити власний foreach, filter, map
+// // ******************* foreach ******************** // //
+// debugger
+Array.prototype.myForeach = function (){
+        for(const item of this){
+        console.log(item)
+        }
+}
+let arrayForeach = ['apple', 'orange', 'plum','cherry','merry','pear','kiwi','mango'];
+arrayForeach.myForeach()
