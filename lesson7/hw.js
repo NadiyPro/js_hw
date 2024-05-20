@@ -252,13 +252,10 @@ let arrayMap = [
     {name: 'masha', age: 30},
     {name: 'max', age: 31}
 ];
-debugger
-
 Array.prototype.myMap = function(callback){
     for(let itemFilter of this) {
-        callback(itemFilter);
-    // }console.log(callback);
-    // return callback;
-
-}}
-arrayMap.myMap( (car)=>{return {...car,cars:'Mitsubishi'}});
+        let iii =  callback(itemFilter);
+        console.log(iii);
+    }
+}
+arrayMap.myMap( (iter)=>{return {...iter,cars:'Mitsubishi'}});
