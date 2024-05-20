@@ -213,7 +213,6 @@ cinderellaName()
 console.log(arrayCinderella.find(shoesFind=>pince.shoes===shoesFind.legsCinderella));
 // // Через Array.prototype. створити власний foreach, filter, map
 // // ******************* foreach ******************** // //
-// debugger
 Array.prototype.myForeach = function (){
         for(const item of this){
         console.log(item)
@@ -221,3 +220,24 @@ Array.prototype.myForeach = function (){
 }
 let arrayForeach = ['apple', 'orange', 'plum','cherry','merry','pear','kiwi','mango'];
 arrayForeach.myForeach()
+// // ******************* filter ******************** // //
+let arrayFilter = [
+    {name: 'petya', age: 30},
+    {name: 'kolya', age: 29},
+    {name: 'olya', age: 28},
+    {name: 'max', age: 30},
+    {name: 'anya', age: 31, },
+    {name: 'oleg', age: 28},
+    {name: 'andrey', age: 29},
+    {name: 'masha', age: 30 },
+    {name: 'max', age: 31 }
+];
+Array.prototype.myFilter = function (callback){
+    for(let itemFilter of this){
+        if(callback(itemFilter)){
+            console.log(itemFilter);
+        }
+    }
+}
+arrayFilter.myFilter((value)=>value.age===30);
+
