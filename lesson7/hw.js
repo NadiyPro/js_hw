@@ -241,4 +241,24 @@ Array.prototype.myFilter = function (callback){
 }
 arrayFilter.myFilter((value)=>value.age===30);
 // // ******************* map ******************** // //
+let arrayMap = [
+    {name: 'petya', age: 30},
+    {name: 'kolya', age: 29},
+    {name: 'olya', age: 28},
+    {name: 'max', age: 30},
+    {name: 'anya', age: 31},
+    {name: 'oleg', age: 28},
+    {name: 'andrey', age: 29},
+    {name: 'masha', age: 30},
+    {name: 'max', age: 31}
+];
+// debugger
 
+Array.prototype.myMap = function(callback){
+    for(let itemFilter of this) {
+        let iii=[];
+        iii.push(callback( ))
+    }
+    return callback()
+}
+console.log(arrayMap.myMap(car=>{return {...arrayMap, car: 'Mitsubishi'}}));
