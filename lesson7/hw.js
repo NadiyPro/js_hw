@@ -211,5 +211,5 @@ let cinderellaName = function () {
 cinderellaName()
 // //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 console.log(arrayCinderella.find(shoesFind=>pince.shoes===shoesFind.legsCinderella));
-// //     Додатково, знайти необхідну попелюшку за допомоги відповідного колбеку
+
 
