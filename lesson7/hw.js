@@ -190,8 +190,6 @@ let Cinderella10=new Cinderella ('Willow',18,38);
 arrayCinderella.push(Cinderella1,Cinderella2,Cinderella3,Cinderella4,Cinderella5,Cinderella6,Cinderella7,Cinderella8,Cinderella9,Cinderella10);
 console.log(arrayCinderella);
 // // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 class Pince{
     constructor(shoes,namePince,agePince) {
         this.shoes=shoes;
@@ -201,19 +199,18 @@ class Pince{
 }
 let pince = new Pince (35,'Nick',25);
 console.log(pince)
-// debugger;
+// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 let cinderellaName = function () {
-    let miniLegs = 0;
-    for(let i=0;i<arrayCinderella.length;i++){
-        miniLegs = arrayCinderella[0].legsCinderella;
-        if(miniLegs>arrayCinderella[i].legsCinderella){
-            miniLegs = arrayCinderella[i]
-            console.log(miniLegs)
+        for(let i=0;i<arrayCinderella.length;i++){
+            if(pince.shoes===arrayCinderella[i].legsCinderella){
+                let shoesCinderella = arrayCinderella[i]
+                console.log(shoesCinderella)
             }
         }
 }
 cinderellaName()
-console.log(arrayCinderella.find(miniLegsFind=>Math.min(miniLegsFind.legsCinderella)));
+// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+console.log(arrayCinderella.find(shoesFind=>pince.shoes===shoesFind.legsCinderella));
 
 
 
