@@ -43,17 +43,10 @@ for (let i=0;i<arrayUl.length;i++) {
     {title: 'Frontend', monthDuration: 4}
 ];
 for (let divCour of coursesAndDurationArray) {
-    let divCour = document.createElement('div');
-    document.body.append(divCour);
+    let div = document.createElement('div');
+    document.body.append(div);
     let p = document.createElement('p');
     p.innerHTML=`title: ${divCour.title}, monthDuration: ${divCour.monthDuration}`;
-    divCour.append(p);
+    div.append(p);
     console.log(p);
 }
-// for (let i=0;i<coursesAndDurationArray.length;i++) {
-//     let divCour = document.createElement('div');
-//     // let li = document.createElement('li');
-//     divCour.innerHTML=coursesAndDurationArray[i];
-//     document.body.append(divCour);
-//     console.log(divCour)
-// }
