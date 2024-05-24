@@ -1,10 +1,7 @@
 // // - створити блок,
 let div = document.createElement('div');
 // // - додати йому класи wrap, collapse, alpha, beta
-div.classList.add('wrap');
-div.classList.add('collapse');
-div.classList.add('alpha');
-div.classList.add('beta');
+div.classList.add('wrap','collapse','alpha','beta');
 // // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
 div.innerHTML = 'hello';
 // div.style.background = 'darkturquoise';
@@ -42,11 +39,11 @@ for (let i=0;i<arrayUl.length;i++) {
     {title: 'Frontend', monthDuration: 4}
 ];
 for (let divCour of coursesAndDurationArray) {
-    let div = document.createElement('div');
-    document.body.append(div);
+    let divC = document.createElement('div');
+    document.body.append(divC);
     let p = document.createElement('p');
     p.innerHTML=`title: ${divCour.title}, monthDuration: ${divCour.monthDuration}`;
-    div.append(p);
+    divC.append(p);
 }
 // // - Є масив
 // // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
