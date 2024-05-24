@@ -187,7 +187,7 @@ let coursesArray = [
 // // для властивості modules зробити список з елементами
 // // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 let coursesDiv = document.createElement('div');
-    coursesDiv.classList.add('coursesClass');
+    coursesDiv.classList.add('oneClass');
     document.body.append(coursesDiv);
 for (let courses of coursesArray) {
     let titleDiv = document.createElement('div');
@@ -203,17 +203,30 @@ for (let courses of coursesArray) {
 
     let monthDurationDiv = document.createElement('div');
     monthDurationDiv.classList.add('monthClass');
-    coursesDiv.append(monthDurationDiv);
+    twoDiv.append(monthDurationDiv);
     let pMonth = document.createElement('p');
     pMonth.innerHTML=`monthDuration: ${courses.monthDuration}`;
     monthDurationDiv.append(pMonth);
 
     let hourDurationDiv = document.createElement('div');
     hourDurationDiv.classList.add('hourClass');
-    coursesDiv.append(hourDurationDiv);
+    twoDiv.append(hourDurationDiv);
     let pHour = document.createElement('p');
     pHour.innerHTML=`hourDuration: ${courses.hourDuration}`;
     hourDurationDiv.append(pHour);
+
+    let threeDiv = document.createElement('div');
+    threeDiv.classList.add('threeDiv');
+    coursesDiv.append(threeDiv);
+
+    let modulesDiv = document.createElement('ul');
+    modulesDiv.classList.add('modules');
+    threeDiv.append(modulesDiv);
+    for (let i=0; i<coursesArray.length;i++){
+        let liModules = document.createElement('li');
+        liModules.innerHTML=coursesArray[i].modules;
+        threeDiv.append(liModules);
+    }
 
 
 }
