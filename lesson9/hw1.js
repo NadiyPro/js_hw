@@ -189,6 +189,7 @@ let coursesArray = [
 let coursesDiv = document.createElement('div');
     coursesDiv.classList.add('oneClass');
     document.body.append(coursesDiv);
+
 for (let courses of coursesArray) {
     let titleDiv = document.createElement('div');
     titleDiv.classList.add('titleClass');
@@ -215,18 +216,17 @@ for (let courses of coursesArray) {
     pHour.innerHTML=`hourDuration: ${courses.hourDuration}`;
     hourDurationDiv.append(pHour);
 
-    let threeDiv = document.createElement('div');
-    threeDiv.classList.add('threeDiv');
-    coursesDiv.append(threeDiv);
+    // let threeDiv = document.createElement('div');
+    // threeDiv.classList.add('threeDiv');
+    // coursesDiv.append(threeDiv);
 
     let modulesDiv = document.createElement('ul');
-    modulesDiv.classList.add('modules');
-    threeDiv.append(modulesDiv);
-    for (let i=0; i<coursesArray.length;i++){
+    modulesDiv.classList.add('threeDiv');
+    coursesDiv.append(modulesDiv);
+
+    for (let li of courses.modules){
         let liModules = document.createElement('li');
-        liModules.innerHTML=coursesArray[i].modules;
-        threeDiv.append(liModules);
+        liModules.innerHTML=li;
+        modulesDiv.append(liModules);
     }
-
-
 }
