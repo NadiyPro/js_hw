@@ -18,3 +18,16 @@ document.body.appendChild(div);
 let clone =div.cloneNode(true);
 document.body.appendChild(clone);
 div.classList.add('clone');
+
+// // - Є масив:
+// //     ['Main','Products','About us','Contacts']
+// // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
+let arrayUl = ['Main','Products','About us','Contacts'];
+let ul = document.createElement('ul');
+document.body.appendChild(ul);
+for (let i=0;i<arrayUl.length;i++) {
+   let li = document.createElement('li');
+    li.innerHTML=arrayUl[i];
+    ul.append(li);
+    console.log(li)
+}
