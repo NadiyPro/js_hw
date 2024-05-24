@@ -29,7 +29,6 @@ for (let i=0;i<arrayUl.length;i++) {
    let li = document.createElement('li');
     li.innerHTML=arrayUl[i];
     ul.append(li);
-    console.log(li)
 }
 // // - Є масив
 // // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
@@ -48,5 +47,19 @@ for (let divCour of coursesAndDurationArray) {
     let p = document.createElement('p');
     p.innerHTML=`title: ${divCour.title}, monthDuration: ${divCour.monthDuration}`;
     div.append(p);
-    console.log(p);
+}
+// // - Є масив
+// // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+// //     Завдання робити через цикли.
+for (let item of coursesAndDurationArray) {
+    let itemDiv = document.createElement('div');
+    itemDiv.classList.add('item');
+    document.body.append(itemDiv);
+    let h = document.createElement('h1');
+    h.classList.add('heading');
+    h.innerHTML=`title: ${item.title}`;
+    itemDiv.append(h);
+    let pItem = document.createElement('p');
+    pItem.innerHTML=`monthDuration: ${item.monthDuration}`;
+    itemDiv.append(pItem);
 }
