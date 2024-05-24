@@ -17,7 +17,7 @@ document.body.appendChild(div);
 // // - клонувати його повністю, та додати клон в body.
 let clone =div.cloneNode(true);
 document.body.appendChild(clone);
-div.classList.add('clone');
+clone.classList.add('clone');
 
 // // - Є масив:
 // //     ['Main','Products','About us','Contacts']
