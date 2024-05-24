@@ -44,9 +44,11 @@ for (let i=0;i<arrayUl.length;i++) {
 ];
 for (let divCour of coursesAndDurationArray) {
     let divCour = document.createElement('div');
-    divCour.innerHTML=`title: ${divCour.title}, monthDuration: ${divCour.monthDuration}`;
     document.body.append(divCour);
-    console.log(divCour);
+    let p = document.createElement('p');
+    p.innerHTML=`title: ${divCour.title}, monthDuration: ${divCour.monthDuration}`;
+    divCour.append(p);
+    console.log(p);
 }
 // for (let i=0;i<coursesAndDurationArray.length;i++) {
 //     let divCour = document.createElement('div');
