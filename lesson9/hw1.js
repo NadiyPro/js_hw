@@ -101,13 +101,17 @@ let simpsons = [
 ];
 // // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 // //     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
+// debugger;
 for (let simpson of simpsons) {
     let simpsonDiv = document.createElement('div');
     simpsonDiv.classList.add('member');
     document.body.append(simpsonDiv);
     let pSimpson = document.createElement('p');
-    pSimpson.innerHTML=`name: ${simpson.name} <br> surname: ${simpson.surname} <br>  age: ${simpson.age} <br>  info: ${simpson.info} <br>  photo: ${simpson.photo}`;
+    pSimpson.innerHTML=`name: ${simpson.name} <br> surname: ${simpson.surname} <br>  age: ${simpson.age} <br>  info: ${simpson.info}`;
     simpsonDiv.append(pSimpson);
+    let imgSimpson = document.createElement('img');
+    imgSimpson.src=`${simpson.photo}`
+    simpsonDiv.append(imgSimpson);
 }
 // // Цикл в циклі
 // // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
