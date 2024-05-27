@@ -19,5 +19,33 @@ buttonCheckIn.onclick=function (e) {
     let divMyCheck=document.createElement('div');
     divMyCheck.classList.add('divMyCheck');
     divMyCheck.innerHTML=`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`
-    document.body.appendChild(divMyCheck);
+    formCheckIn.appendChild(divMyCheck);
 }
+// // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
+let divNumber=document.createElement('div');
+divNumber.classList.add('divNumber');
+let numberN=localStorage.getItem('count') || 1;
+if(!numberN){
+    localStorage.setItem('count', JSON.stringify(numberN))
+} else {
+    let numberSum =  JSON.parse(numberN);
+    numberSum++;
+    localStorage.setItem('count', JSON.stringify(numberSum));
+}
+divNumber.innerHTML=`${numberN}`
+// let numberSum =  JSON.parse(numberN);
+// localStorage.setItem('count', JSON.stringify(numberSum));
+// divNumber.innerHTML=`${numberN}`
+
+// numberSum.push(numberN);
+// localStorage.setItem('count', JSON.stringify(numberSum));
+// divNumber.innerHTML=`${numberSum}`
+// window.onload=function () {
+//     numberN ++;
+//     localStorage.setItem('count',numberN);
+//     divNumber.innerHTML=`${numberN}`
+// }
+
+
+document.body.appendChild(divNumber);
+
