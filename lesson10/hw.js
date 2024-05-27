@@ -13,3 +13,11 @@ let labelCheckIn2=document.getElementsByTagName('label')[2];
 let ageCheckIn=document.getElementById('age');
 let buttonCheckIn=document.getElementsByClassName('createButton')[0];
 formCheckIn.append(labelCheckIn0,nameCheckIn,labelCheckIn1,surnameCheckIn,labelCheckIn2,ageCheckIn,buttonCheckIn);
+
+buttonCheckIn.onclick=function (e) {
+    e.preventDefault();
+    let divMyCheck=document.createElement('div');
+    divMyCheck.classList.add('divMyCheck');
+    divMyCheck.innerHTML=`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`
+    document.body.appendChild(divMyCheck);
+}
