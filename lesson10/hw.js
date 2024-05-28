@@ -20,7 +20,11 @@ buttonCheckIn.onclick=function (e) {
     divMyCheck.classList.add('divMyCheck');
     divMyCheck.innerHTML=`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`
     formCheckIn.appendChild(divMyCheck);
+    let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
+    arrayHundred.push(`name:${nameCheckIn.value}, surname:${surnameCheckIn.value}, age: ${ageCheckIn.value}`);
+    localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
 }
+
 // // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 let divNumber=document.createElement('div');
 divNumber.classList.add('divNumber');
@@ -58,23 +62,21 @@ nextBtn.innerHTML='next'
 let prevBtn =document.createElement('button');
 prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
-let arrayHundred = [
-    {
-        id: id
-    }
-];
-// Array.prototype.arr=function (callback) {
-//     for(let i=0;i<100;i++){
-//         callback=i;
-//         // console.log(arrayHundred)
-//         // this.push(callback = i);
-//     }
-// }
-// arrayHundred.arr=((value)=>value.id)
-//
-//
-// console.log(arrayHundred)
 
+// обєкти забираюзі сховища, які сформувала в першому завдані name,surname,age
+// buttonCheckIn.addEventListener('click',function (){
+//     let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
+//     arrayHundred.push(`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`);
+//     localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
+//     divElements.innerHTML=`${arrayHundred}`
+// })
+
+
+// window.onload = function(){
+//        for(let i=1;i<10;i++){
+//            arrayHundred.length = 10;
+//            divElements.innerHTML=`${arrayHundred}`
+//        }
 
 
 // divElements.innerHTML=`${this}`
@@ -96,7 +98,7 @@ let arrayHundred = [
 // }
 
 
-
+//
 // nextBtn.onclick=function (e) {
 //     e.preventDefault();
 //     for(let i=11;i<20;i++){
