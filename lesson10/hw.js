@@ -44,6 +44,16 @@ let dateSessions = new Date();
 let arraySessions =JSON.parse(localStorage.getItem('sessions') )|| [] ;
 arraySessions.push(dateSessions);
 localStorage.setItem('sessions', JSON.stringify(arraySessions));
+// // зробити масив на 100 об'єктів та дві кнопки prev next
+// // при завантажені сторінки з'являються перші 10 об'єктів.
+// // При натисканні next виводяться настпні 10 об'єктів
+// // При натисканні prev виводяться попередні 10 об'єктів
+let arrayHundred = [];
+    for(let i=0;i<100;i++){
+        arrayHundred.push([arrayHundred.length] = [i]);
+    }
+console.log(arrayHundred)
+
 
 
 
