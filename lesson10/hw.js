@@ -60,19 +60,23 @@ prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
 let arrayHundred = [
     {
-        id: 1
+        id: id
     }
 ];
-Array.prototype.objHundred = function (callback){
-    for(let i=0;i<100;i++){
-        this.callback=i;
-        console.log(this.callback)
-       // this.push(callback = i);
-    }
-}
-arrayHundred.objHundred=((value)=>value.id);
+// Array.prototype.arr=function (callback) {
+//     for(let i=0;i<100;i++){
+//         callback=i;
+//         // console.log(arrayHundred)
+//         // this.push(callback = i);
+//     }
+// }
+// arrayHundred.arr=((value)=>value.id)
+//
+//
+// console.log(arrayHundred)
 
-console.log(arrayHundred)
+
+
 // divElements.innerHTML=`${this}`
 
     // for(let i=0;i<100;i++){
