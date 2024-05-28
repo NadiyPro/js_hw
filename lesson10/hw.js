@@ -653,8 +653,8 @@ document.body.appendChild(divTextBtn);
 let divAge=document.createElement('div');
 document.body.appendChild(divAge);
 let formAge=document.getElementById('f2');
-let ageInput=document.getElementById('age people');
 let labelAge0=document.getElementsByTagName('label')[0];
+let ageInput=document.getElementById('age people');
 let buttonAge=document.getElementsByClassName('ageButton')[0];
 formAge.append(labelAge0,ageInput,buttonAge);
 
@@ -674,3 +674,28 @@ divAge.append(formAge);
 // // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 // //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // // (Додатковачастина для завдання)
+let divTable=document.createElement('div');
+document.body.appendChild(divTable);
+let formTable=document.getElementById('table');
+let labelTable0=document.getElementsByTagName('label')[0];
+let linesInput=document.getElementById('lines');
+let labelTable1=document.getElementsByTagName('label')[1];
+let columnsInput=document.getElementById('columns');
+let labelTable2=document.getElementsByTagName('label')[2];
+let contentsInput=document.getElementById('contents');
+let buttonTable=document.getElementsByClassName('tableButton')[0];
+formTable.append(labelTable0,linesInput,labelTable1,columnsInput,labelTable2,contentsInput,buttonTable);
+
+buttonTable.onclick=function (e) {
+    e.preventDefault();
+    let divTableRez=document.createElement('div');
+    divTableRez.classList.add('divTableRez');
+    if(ageInput.value<18){
+        divAudit.innerHTML=`вік меньше ніж 18 років`
+        divAudit.style.background='indianred';
+    } else{
+        divAudit.innerHTML=`повнолітній`
+    }
+    formTable.appendChild(divAudit);
+}
+divTable.append(formTable);
