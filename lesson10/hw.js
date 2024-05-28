@@ -597,7 +597,7 @@ function arrDisplay() {
     let startIndex = countObjPage * currentPage;
     let finalIndex = startIndex + countObjPage;
     let currentItems = arrHundred.slice(startIndex, finalIndex); // // обрізаємо згідно індексів кількість елементів які хочемо відображати
-    divElements.innerHTML='';
+    divElements.innerHTML=''; // // відокремлюємо
     for (let oneElement of currentItems) {
         let divOneElement = document.createElement('div');
         divOneElement.innerHTML = `name: ${oneElement.nameCheckIn}, surname: ${oneElement.surnameCheckIn}, age:${oneElement.ageCheckIn}`
