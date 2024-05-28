@@ -20,9 +20,9 @@ buttonCheckIn.onclick=function (e) {
     divMyCheck.classList.add('divMyCheck');
     divMyCheck.innerHTML=`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`
     formCheckIn.appendChild(divMyCheck);
-    let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
-    arrayHundred.push(`name:${nameCheckIn.value}, surname:${surnameCheckIn.value}, age: ${ageCheckIn.value}`);
-    localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
+    // let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
+    // arrayHundred.push({nameCheckIn:`${nameCheckIn.value}`,surnameCheckIn:`${surnameCheckIn.value}`,ageCheckIn:`${ageCheckIn.value}`});
+    // localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
 }
 
 // // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
@@ -63,13 +63,135 @@ let prevBtn =document.createElement('button');
 prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
 
-// обєкти забираюзі сховища, які сформувала в першому завдані name,surname,age
-// buttonCheckIn.addEventListener('click',function (){
-//     let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
-//     arrayHundred.push(`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`);
-//     localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
-//     divElements.innerHTML=`${arrayHundred}`
-// })
+// обєкти забираю зі сховища, які сформувала в першому завдані name,surname,age
+
+buttonCheckIn.addEventListener('click',function (){
+    let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
+    arrayHundred.push({nameCheckIn:`${nameCheckIn.value}`,surnameCheckIn:`${surnameCheckIn.value}`,ageCheckIn:`${ageCheckIn.value}`});
+    localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
+})
+let arrHundred = [
+        {
+            "nameCheckIn": "Owen Ewing",
+            "surnameCheckIn": "Hurst",
+            "ageCheckIn": "15"
+        },
+        {
+            "nameCheckIn": "Velma Bentley",
+            "surnameCheckIn": "Lynn",
+            "ageCheckIn": "46"
+        },
+        {
+            "nameCheckIn": "Kyra Soto",
+            "surnameCheckIn": "Meyer",
+            "ageCheckIn": "24"
+        },
+        {
+            "nameCheckIn": "Phoebe Riggs",
+            "surnameCheckIn": "Bates",
+            "ageCheckIn": "6"
+        },
+        {
+            "nameCheckIn": "Sybill Brown",
+            "surnameCheckIn": "Marquez",
+            "ageCheckIn": "17"
+        },
+        {
+            "nameCheckIn": "Uma Hebert",
+            "surnameCheckIn": "Foreman",
+            "ageCheckIn": "86"
+        },
+        {
+            "nameCheckIn": "Donna Walton",
+            "surnameCheckIn": "Harding",
+            "ageCheckIn": "21"
+        },
+        {
+            "nameCheckIn": "Xavier Dale",
+            "surnameCheckIn": "Navarro",
+            "ageCheckIn": "30"
+        },
+        {
+            "nameCheckIn": "Amaya Hurst",
+            "surnameCheckIn": "Howe",
+            "ageCheckIn": "7"
+        },
+        {
+            "nameCheckIn": "Kelsie Wheeler",
+            "surnameCheckIn": "French",
+            "ageCheckIn": "74"
+        },
+        {
+            "nameCheckIn": "Caryn Bright",
+            "surnameCheckIn": "Medina",
+            "ageCheckIn": "100"
+        },
+        {
+            "nameCheckIn": "Myles Frederick",
+            "surnameCheckIn": "Henderson",
+            "ageCheckIn": "26"
+        },
+        {
+            "nameCheckIn": "Cade Maynard",
+            "surnameCheckIn": "Graves",
+            "ageCheckIn": "5"
+        },
+        {
+            "nameCheckIn": "Brynne Guy",
+            "surnameCheckIn": "Hurley",
+            "ageCheckIn": "90"
+        },
+        {
+            "nameCheckIn": "Gemma Price",
+            "surnameCheckIn": "David",
+            "ageCheckIn": "83"
+        },
+        {
+            "nameCheckIn": "Sigourney Webb",
+            "surnameCheckIn": "Stevens",
+            "ageCheckIn": "42"
+        },
+        {
+            "nameCheckIn": "Olga Wall",
+            "surnameCheckIn": "Duran",
+            "ageCheckIn": "15"
+        },
+        {
+            "nameCheckIn": "Mariam Petersen",
+            "surnameCheckIn": "Gray",
+            "ageCheckIn": "85"
+        },
+        {
+            "nameCheckIn": "Alden Nixon",
+            "surnameCheckIn": "Cantu",
+            "ageCheckIn": "43"
+        },
+        {
+            "nameCheckIn": "Derek Snider",
+            "surnameCheckIn": "Flowers",
+            "ageCheckIn": "58"
+        },
+        {
+            "nameCheckIn": "Derek Snider",
+            "surnameCheckIn": "Flowers",
+            "ageCheckIn": "58"
+        },
+        {
+            "nameCheckIn": "Montana Mcconnell",
+            "surnameCheckIn": "Holcomb",
+            "ageCheckIn": "38"
+        }
+];
+let countObjPage=10; // // кількість обєктів на сторінці
+let currentPage = 0; // // поточна сторінка
+
+window.onload = function(){
+    for (let arrOne of arrHundred){
+        arrHundred.length = 10;
+        divElements.innerHTML=JSON.stringify(arrHundred)
+
+    }
+}
 
 
 // window.onload = function(){
