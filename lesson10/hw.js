@@ -72,124 +72,129 @@ buttonCheckIn.addEventListener('click',function (){
 })
 let arrHundred = [
         {
-            "nameCheckIn": "Owen Ewing",
-            "surnameCheckIn": "Hurst",
-            "ageCheckIn": "15"
+            nameCheckIn: "Owen Ewing",
+            surnameCheckIn: "Hurst",
+            ageCheckIn: 15
         },
         {
-            "nameCheckIn": "Velma Bentley",
-            "surnameCheckIn": "Lynn",
-            "ageCheckIn": "46"
+            nameCheckIn: "Velma Bentley",
+            surnameCheckIn: "Lynn",
+            ageCheckIn: 46
         },
         {
-            "nameCheckIn": "Kyra Soto",
-            "surnameCheckIn": "Meyer",
-            "ageCheckIn": "24"
+            nameCheckIn: "Kyra Soto",
+            surnameCheckIn: "Meyer",
+            ageCheckIn: 24
         },
         {
-            "nameCheckIn": "Phoebe Riggs",
-            "surnameCheckIn": "Bates",
-            "ageCheckIn": "6"
+            nameCheckIn: "Phoebe Riggs",
+            surnameCheckIn: "Bates",
+            ageCheckIn: 6
         },
         {
-            "nameCheckIn": "Sybill Brown",
-            "surnameCheckIn": "Marquez",
-            "ageCheckIn": "17"
+            nameCheckIn: "Sybill Brown",
+            surnameCheckIn: "Marquez",
+            ageCheckIn: 17
         },
         {
-            "nameCheckIn": "Uma Hebert",
-            "surnameCheckIn": "Foreman",
-            "ageCheckIn": "86"
+            nameCheckIn: "Uma Hebert",
+            surnameCheckIn: "Foreman",
+            ageCheckIn: 86
         },
         {
-            "nameCheckIn": "Donna Walton",
-            "surnameCheckIn": "Harding",
-            "ageCheckIn": "21"
+            nameCheckIn: "Donna Walton",
+            surnameCheckIn: "Harding",
+            ageCheckIn: 21
         },
         {
-            "nameCheckIn": "Xavier Dale",
-            "surnameCheckIn": "Navarro",
-            "ageCheckIn": "30"
+            nameCheckIn: "Xavier Dale",
+            surnameCheckIn: "Navarro",
+            ageCheckIn: 30
         },
         {
-            "nameCheckIn": "Amaya Hurst",
-            "surnameCheckIn": "Howe",
-            "ageCheckIn": "7"
+            nameCheckIn: "Amaya Hurst",
+            surnameCheckIn: "Howe",
+            ageCheckIn: 7
         },
         {
-            "nameCheckIn": "Kelsie Wheeler",
-            "surnameCheckIn": "French",
-            "ageCheckIn": "74"
+            nameCheckIn: "Kelsie Wheeler",
+            surnameCheckIn: "French",
+            ageCheckIn: 74
         },
         {
-            "nameCheckIn": "Caryn Bright",
-            "surnameCheckIn": "Medina",
-            "ageCheckIn": "100"
+            nameCheckIn: "Caryn Bright",
+            surnameCheckIn: "Medina",
+            ageCheckIn: 100
         },
         {
-            "nameCheckIn": "Myles Frederick",
-            "surnameCheckIn": "Henderson",
-            "ageCheckIn": "26"
+            nameCheckIn: "Myles Frederick",
+            surnameCheckIn: "Henderson",
+            ageCheckIn: 26
         },
         {
-            "nameCheckIn": "Cade Maynard",
-            "surnameCheckIn": "Graves",
-            "ageCheckIn": "5"
+            nameCheckIn: "Cade Maynard",
+            surnameCheckIn: "Graves",
+            ageCheckIn: 5
         },
         {
-            "nameCheckIn": "Brynne Guy",
-            "surnameCheckIn": "Hurley",
-            "ageCheckIn": "90"
+            nameCheckIn: "Brynne Guy",
+            surnameCheckIn: "Hurley",
+            ageCheckIn: 90
         },
         {
-            "nameCheckIn": "Gemma Price",
-            "surnameCheckIn": "David",
-            "ageCheckIn": "83"
+            nameCheckIn: "Gemma Price",
+            surnameCheckIn: "David",
+            ageCheckIn: 83
         },
         {
-            "nameCheckIn": "Sigourney Webb",
-            "surnameCheckIn": "Stevens",
-            "ageCheckIn": "42"
+            nameCheckIn: "Sigourney Webb",
+            surnameCheckIn: "Stevens",
+            ageCheckIn: 42
         },
         {
-            "nameCheckIn": "Olga Wall",
-            "surnameCheckIn": "Duran",
-            "ageCheckIn": "15"
+            nameCheckIn: "Olga Wall",
+            surnameCheckIn: "Duran",
+            ageCheckIn: 15
         },
         {
-            "nameCheckIn": "Mariam Petersen",
-            "surnameCheckIn": "Gray",
-            "ageCheckIn": "85"
+            nameCheckIn: "Mariam Petersen",
+            surnameCheckIn: "Gray",
+            ageCheckIn: 85
         },
         {
-            "nameCheckIn": "Alden Nixon",
-            "surnameCheckIn": "Cantu",
-            "ageCheckIn": "43"
+            nameCheckIn: "Alden Nixon",
+            surnameCheckIn: "Cantu",
+            ageCheckIn: 43
         },
         {
-            "nameCheckIn": "Derek Snider",
-            "surnameCheckIn": "Flowers",
-            "ageCheckIn": "58"
+            nameCheckIn: "Derek Snider",
+            surnameCheckIn: "Flowers",
+            ageCheckIn: 58
         },
         {
-            "nameCheckIn": "Derek Snider",
-            "surnameCheckIn": "Flowers",
-            "ageCheckIn": "58"
+            nameCheckIn: "Derek Snider",
+            surnameCheckIn: "Flowers",
+            ageCheckIn: 58
         },
         {
-            "nameCheckIn": "Montana Mcconnell",
-            "surnameCheckIn": "Holcomb",
-            "ageCheckIn": "38"
+            nameCheckIn: "Montana Mcconnell",
+            surnameCheckIn: "Holcomb",
+            ageCheckIn: 38
         }
 ];
 // let countObjPage=10; // // кількість обєктів на сторінці
 // let currentPage = 0; // // поточна сторінка
 
-window.onload = function(){
-    let startIndex=arrHundred.slice(0,10);
-    let jsonStartIndex = JSON.stringify(startIndex);
-    divElements.innerHTML=`${jsonStartIndex}`
-}
+let startIndex=arrHundred.slice(0,10);
+let jsonStartIndex = JSON.stringify(startIndex);
+divElements.innerHTML=`${jsonStartIndex}`
+console.log(startIndex)
+
+// window.onload = function(){
+//     let startIndex=arrHundred.slice(0,10);
+//     let jsonStartIndex = JSON.stringify(startIndex);
+//     divElements.innerHTML=`${jsonStartIndex}`
+// }
 
 
 // window.onload = function(){
