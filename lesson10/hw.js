@@ -627,13 +627,26 @@ document.body.appendChild(divElements);
 document.body.appendChild(divNext);
 // // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 let divText = document.createElement('div');
-divText.classList.add('divText');
+divText.classList.add('text');
 let divTextBtn = document.createElement('div');
 divTextBtn.classList.add('divTextBtn');
+let clearBtn =document.createElement('button');
+clearBtn.classList.add('clearBtn');
 let textBtn =document.createElement('button');
 textBtn.classList.add('textBtn');
-
-textBtn.innerHTML='clear'
+divText.innerHTML=`при натисканні на кнопку зникає даний текс`
+textBtn.innerHTML='show'
+clearBtn.innerHTML='clear'
+textBtn.onclick=function () {
+    divText.innerHTML=``;
+}
+clearBtn.onclick=function () {
+    divText.innerHTML=``;
+}
+textBtn.onclick=function () {
+    divText.innerHTML=`при натисканні на кнопку зникає даний текс`;
+}
 divTextBtn.appendChild(textBtn);
+divTextBtn.appendChild(clearBtn);
 document.body.appendChild(divText);
 document.body.appendChild(divTextBtn);
