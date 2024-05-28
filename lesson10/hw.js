@@ -32,7 +32,7 @@ if(!numberN){
     let numberSum = JSON.parse(numberN);
     numberSum++;
     localStorage.setItem('count', JSON.stringify(numberSum));
-    divNumber.innerHTML=`${numberSum}`
+    divNumber.innerHTML=`Кількість перезавантажень сторінки: ${numberSum}`
 }
 document.body.appendChild(divNumber);
 
@@ -50,25 +50,34 @@ localStorage.setItem('sessions', JSON.stringify(arraySessions));
 // // При натисканні prev виводяться попередні 10 об'єктів
 let divNext = document.createElement('div');
 divNext.classList.add('divNext');
+let divElements = document.createElement('div');
+divElements.classList.add('divElements');
 let nextBtn =document.createElement('button');
 nextBtn.classList.add('nextBtn');
 nextBtn.innerHTML='next'
+let prevBtn =document.createElement('button');
+prevBtn.classList.add('prevBtn');
+prevBtn.innerHTML='prev'
 let arrayHundred = [];
     for(let i=0;i<100;i++){
         arrayHundred.push([arrayHundred.length] = [i]);
     }
 console.log(arrayHundred)
-window.onload = function(){
+    window.onload = function(){
        for(let i=0;i<10;i++){
            arrayHundred.length = 10;
-       } console.log(arrayHundred)
-       // for(let i=0;i<10;i++){
-       //     [hundred.length]=[i]; console.log(hundred)
-       // }
-   // }
+       }
+}
+
+// divNext.innerHTML = `${arrayHundred}`;
+nextBtn.onclick=function (e) {
+    e.preventDefault();
 
 }
+
 divNext.appendChild(nextBtn);
+divNext.appendChild(prevBtn);
+document.body.appendChild(divElements);
 document.body.appendChild(divNext);
 
 
