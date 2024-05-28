@@ -594,7 +594,6 @@ let arrHundred=[
 let countObjPage=10; // // кількість обєктів на сторінці
 let currentPage = 0; // // поточна сторінка
 function arrDisplay() {
-
     let startIndex = countObjPage * currentPage;
     let finalIndex = startIndex + countObjPage;
     let currentItems = arrHundred.slice(startIndex, finalIndex);
