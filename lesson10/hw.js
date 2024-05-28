@@ -211,21 +211,9 @@ prevBtn.onclick=function prevPage () {
     }
     arrDisplay();
 }
-
-
-
-// window.onload = function(){
-//     let startIndex=arrHundred.slice(0,10);
-//     let jsonStartIndex = JSON.stringify(startIndex);
-//     let divOne = document.createElement('div');
-//     divOne.classList.add('divOne');
-//     divNext.appendChild(divOne);
-//     for (let oneElements of arrHundred){
-//         let startIndex=arrHundred.slice(0,10);
-//         divElements.innerHTML=`name: ${oneElements.nameCheckIn}, surname: ${oneElements.surnameCheckIn}, age:${oneElements.ageCheckIn}`
-//     }
-// }
-
+window.onload=function () {
+    arrDisplay();
+}
 
 divNext.appendChild(nextBtn);
 divNext.appendChild(prevBtn);
