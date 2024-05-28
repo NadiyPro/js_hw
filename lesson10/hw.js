@@ -182,63 +182,48 @@ let arrHundred = [
             ageCheckIn: 38
         }
 ];
-// let countObjPage=10; // // кількість обєктів на сторінці
-// let currentPage = 0; // // поточна сторінка
+let countObjPage=10; // // кількість обєктів на сторінці
+let currentPage = 0; // // поточна сторінка
+function arrDisplay() {
 
-let startIndex=arrHundred.slice(0,10);
-let jsonStartIndex = JSON.stringify(startIndex);
-divElements.innerHTML=`${jsonStartIndex}`
-console.log(startIndex)
+    let startIndex = countObjPage * currentPage;
+    let finalIndex = startIndex + countObjPage;
+    let currentItems = arrHundred.slice(startIndex, finalIndex);
+    divElements.innerHTML='';
+    for (let oneElement of currentItems) {
+        let divOneElement = document.createElement('div');
+        divOneElement.innerHTML = `name: ${oneElement.nameCheckIn}, surname: ${oneElement.surnameCheckIn}, age:${oneElement.ageCheckIn}`
+        divElements.appendChild(divOneElement);
+    }
+}
+
+nextBtn.onclick=function nextPage () {
+    currentPage++;
+    if(currentPage>=Math.floor(arrHundred.length / countObjPage)){
+        currentPage = 0;
+    }
+    arrDisplay();
+}
+prevBtn.onclick=function prevPage () {
+    currentPage--;
+    if(currentPage<0){
+        currentPage=Math.floor(arrHundred.length / countObjPage)-1
+    }
+    arrDisplay();
+}
+
+
 
 // window.onload = function(){
 //     let startIndex=arrHundred.slice(0,10);
 //     let jsonStartIndex = JSON.stringify(startIndex);
-//     divElements.innerHTML=`${jsonStartIndex}`
-// }
-
-
-// window.onload = function(){
-//        for(let i=1;i<10;i++){
-//            arrayHundred.length = 10;
-//            divElements.innerHTML=`${arrayHundred}`
-//        }
-
-
-// divElements.innerHTML=`${this}`
-
-    // for(let i=0;i<100;i++){
-    //
-    //     arrayHundred.push(arrayHundred.length = i);
-    //     divElements.innerHTML=`${arrayHundred}`
-    // }
-// let localHundred =JSON.parse(localStorage.getItem('arrHundred') )|| [] ;
-// localHundred.push(arrayHundred);
-// localStorage.setItem('arrHundred', JSON.stringify(localHundred));
-// console.log(arrayHundred)
-// window.onload = function(){
-//     for(let i=1;i<10;i++){
-//         arrayHundred.length = 10;
+//     let divOne = document.createElement('div');
+//     divOne.classList.add('divOne');
+//     divNext.appendChild(divOne);
+//     for (let oneElements of arrHundred){
+//         let startIndex=arrHundred.slice(0,10);
+//         divElements.innerHTML=`name: ${oneElements.nameCheckIn}, surname: ${oneElements.surnameCheckIn}, age:${oneElements.ageCheckIn}`
 //     }
-//     divElements.innerHTML=`${arrayHundred}`
-// }
-
-
-//
-// nextBtn.onclick=function (e) {
-//     e.preventDefault();
-//     for(let i=11;i<20;i++){
-//         arrayHundred.length = 10;
-//
-//     }divElements.innerHTML=`${arrayHundred}`
-
-
-
-//     window.onload = function(){
-//        for(let i=1;i<10;i++){
-//            arrayHundred.length = 10;
-//            divElements.innerHTML=`${arrayHundred}`
-//        }
-//
 // }
 
 
