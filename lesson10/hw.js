@@ -64,124 +64,533 @@ prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
 
 // обєкти забираю зі сховища, які сформувала в першому завдані name,surname,age
-
 buttonCheckIn.addEventListener('click',function (){
     let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
     arrayHundred.push({nameCheckIn:`${nameCheckIn.value}`,surnameCheckIn:`${surnameCheckIn.value}`,ageCheckIn:`${ageCheckIn.value}`});
     localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
 })
-let arrHundred = [
-        {
-            nameCheckIn: "Owen Ewing",
-            surnameCheckIn: "Hurst",
-            ageCheckIn: 15
-        },
-        {
-            nameCheckIn: "Velma Bentley",
-            surnameCheckIn: "Lynn",
-            ageCheckIn: 46
-        },
-        {
-            nameCheckIn: "Kyra Soto",
-            surnameCheckIn: "Meyer",
-            ageCheckIn: 24
-        },
-        {
-            nameCheckIn: "Phoebe Riggs",
-            surnameCheckIn: "Bates",
-            ageCheckIn: 6
-        },
-        {
-            nameCheckIn: "Sybill Brown",
-            surnameCheckIn: "Marquez",
-            ageCheckIn: 17
-        },
-        {
-            nameCheckIn: "Uma Hebert",
-            surnameCheckIn: "Foreman",
-            ageCheckIn: 86
-        },
-        {
-            nameCheckIn: "Donna Walton",
-            surnameCheckIn: "Harding",
-            ageCheckIn: 21
-        },
-        {
-            nameCheckIn: "Xavier Dale",
-            surnameCheckIn: "Navarro",
-            ageCheckIn: 30
-        },
-        {
-            nameCheckIn: "Amaya Hurst",
-            surnameCheckIn: "Howe",
-            ageCheckIn: 7
-        },
-        {
-            nameCheckIn: "Kelsie Wheeler",
-            surnameCheckIn: "French",
-            ageCheckIn: 74
-        },
-        {
-            nameCheckIn: "Caryn Bright",
-            surnameCheckIn: "Medina",
-            ageCheckIn: 100
-        },
-        {
-            nameCheckIn: "Myles Frederick",
-            surnameCheckIn: "Henderson",
-            ageCheckIn: 26
-        },
-        {
-            nameCheckIn: "Cade Maynard",
-            surnameCheckIn: "Graves",
-            ageCheckIn: 5
-        },
-        {
-            nameCheckIn: "Brynne Guy",
-            surnameCheckIn: "Hurley",
-            ageCheckIn: 90
-        },
-        {
-            nameCheckIn: "Gemma Price",
-            surnameCheckIn: "David",
-            ageCheckIn: 83
-        },
-        {
-            nameCheckIn: "Sigourney Webb",
-            surnameCheckIn: "Stevens",
-            ageCheckIn: 42
-        },
-        {
-            nameCheckIn: "Olga Wall",
-            surnameCheckIn: "Duran",
-            ageCheckIn: 15
-        },
-        {
-            nameCheckIn: "Mariam Petersen",
-            surnameCheckIn: "Gray",
-            ageCheckIn: 85
-        },
-        {
-            nameCheckIn: "Alden Nixon",
-            surnameCheckIn: "Cantu",
-            ageCheckIn: 43
-        },
-        {
-            nameCheckIn: "Derek Snider",
-            surnameCheckIn: "Flowers",
-            ageCheckIn: 58
-        },
-        {
-            nameCheckIn: "Derek Snider",
-            surnameCheckIn: "Flowers",
-            ageCheckIn: 58
-        },
-        {
-            nameCheckIn: "Montana Mcconnell",
-            surnameCheckIn: "Holcomb",
-            ageCheckIn: 38
-        }
-];
+let arrHundred=[
+    {
+        "nameCheckIn": "Owen Ewing",
+        "surnameCheckIn": "Hurst",
+        "ageCheckIn": "15"
+    },
+    {
+        "nameCheckIn": "Velma Bentley",
+        "surnameCheckIn": "Lynn",
+        "ageCheckIn": "46"
+    },
+    {
+        "nameCheckIn": "Kyra Soto",
+        "surnameCheckIn": "Meyer",
+        "ageCheckIn": "24"
+    },
+    {
+        "nameCheckIn": "Phoebe Riggs",
+        "surnameCheckIn": "Bates",
+        "ageCheckIn": "6"
+    },
+    {
+        "nameCheckIn": "Sybill Brown",
+        "surnameCheckIn": "Marquez",
+        "ageCheckIn": "17"
+    },
+    {
+        "nameCheckIn": "Uma Hebert",
+        "surnameCheckIn": "Foreman",
+        "ageCheckIn": "86"
+    },
+    {
+        "nameCheckIn": "Donna Walton",
+        "surnameCheckIn": "Harding",
+        "ageCheckIn": "21"
+    },
+    {
+        "nameCheckIn": "Xavier Dale",
+        "surnameCheckIn": "Navarro",
+        "ageCheckIn": "30"
+    },
+    {
+        "nameCheckIn": "Amaya Hurst",
+        "surnameCheckIn": "Howe",
+        "ageCheckIn": "7"
+    },
+    {
+        "nameCheckIn": "Kelsie Wheeler",
+        "surnameCheckIn": "French",
+        "ageCheckIn": "74"
+    },
+    {
+        "nameCheckIn": "Caryn Bright",
+        "surnameCheckIn": "Medina",
+        "ageCheckIn": "100"
+    },
+    {
+        "nameCheckIn": "Myles Frederick",
+        "surnameCheckIn": "Henderson",
+        "ageCheckIn": "26"
+    },
+    {
+        "nameCheckIn": "Cade Maynard",
+        "surnameCheckIn": "Graves",
+        "ageCheckIn": "5"
+    },
+    {
+        "nameCheckIn": "Brynne Guy",
+        "surnameCheckIn": "Hurley",
+        "ageCheckIn": "90"
+    },
+    {
+        "nameCheckIn": "Gemma Price",
+        "surnameCheckIn": "David",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Sigourney Webb",
+        "surnameCheckIn": "Stevens",
+        "ageCheckIn": "42"
+    },
+    {
+        "nameCheckIn": "Olga Wall",
+        "surnameCheckIn": "Duran",
+        "ageCheckIn": "15"
+    },
+    {
+        "nameCheckIn": "Mariam Petersen",
+        "surnameCheckIn": "Gray",
+        "ageCheckIn": "85"
+    },
+    {
+        "nameCheckIn": "Alden Nixon",
+        "surnameCheckIn": "Cantu",
+        "ageCheckIn": "43"
+    },
+    {
+        "nameCheckIn": "Derek Snider",
+        "surnameCheckIn": "Flowers",
+        "ageCheckIn": "58"
+    },
+    {
+        "nameCheckIn": "Derek Snider",
+        "surnameCheckIn": "Flowers",
+        "ageCheckIn": "58"
+    },
+    {
+        "nameCheckIn": "Montana Mcconnell",
+        "surnameCheckIn": "Holcomb",
+        "ageCheckIn": "38"
+    },
+    {
+        "nameCheckIn": "Oleg Ellis",
+        "surnameCheckIn": "Benson",
+        "ageCheckIn": "28"
+    },
+    {
+        "nameCheckIn": "Blaze Henry",
+        "surnameCheckIn": "Weber",
+        "ageCheckIn": "100"
+    },
+    {
+        "nameCheckIn": "Samuel Dale",
+        "surnameCheckIn": "Mason",
+        "ageCheckIn": "8"
+    },
+    {
+        "nameCheckIn": "Lydia Sloan",
+        "surnameCheckIn": "Sosa",
+        "ageCheckIn": "25"
+    },
+    {
+        "nameCheckIn": "Xenos Foley",
+        "surnameCheckIn": "Ball",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Xenos Foley",
+        "surnameCheckIn": "Ball",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Colby Hogan",
+        "surnameCheckIn": "Mcintyre",
+        "ageCheckIn": "31"
+    },
+    {
+        "nameCheckIn": "Linus Wilcox",
+        "surnameCheckIn": "Hodge",
+        "ageCheckIn": "89"
+    },
+    {
+        "nameCheckIn": "Summer Kramer",
+        "surnameCheckIn": "Luna",
+        "ageCheckIn": "43"
+    },
+    {
+        "nameCheckIn": "Berk Davidson",
+        "surnameCheckIn": "Baker",
+        "ageCheckIn": "25"
+    },
+    {
+        "nameCheckIn": "Aaron Sutton",
+        "surnameCheckIn": "Guzman",
+        "ageCheckIn": "45"
+    },
+    {
+        "nameCheckIn": "Ciaran Dickson",
+        "surnameCheckIn": "Hendrix",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Jack Prince",
+        "surnameCheckIn": "Marquez",
+        "ageCheckIn": "30"
+    },
+    {
+        "nameCheckIn": "Aretha Berg",
+        "surnameCheckIn": "Rios",
+        "ageCheckIn": "18"
+    },
+    {
+        "nameCheckIn": "Carter Best",
+        "surnameCheckIn": "Robbins",
+        "ageCheckIn": "81"
+    },
+    {
+        "nameCheckIn": "Paki Park",
+        "surnameCheckIn": "Little",
+        "ageCheckIn": "82"
+    },
+    {
+        "nameCheckIn": "Kato Boyle",
+        "surnameCheckIn": "Bennett",
+        "ageCheckIn": "73"
+    },
+    {
+        "nameCheckIn": "Justina Cortez",
+        "surnameCheckIn": "Delacruz",
+        "ageCheckIn": "42"
+    },
+    {
+        "nameCheckIn": "Emerson Walls",
+        "surnameCheckIn": "Tillman",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Emerson Walls",
+        "surnameCheckIn": "Tillman",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Beatrice Griffin",
+        "surnameCheckIn": "Mann",
+        "ageCheckIn": "79"
+    },
+    {
+        "nameCheckIn": "Raja Simon",
+        "surnameCheckIn": "Woods",
+        "ageCheckIn": "75"
+    },
+    {
+        "nameCheckIn": "Bethany Rhodes",
+        "surnameCheckIn": "Hale",
+        "ageCheckIn": "40"
+    },
+    {
+        "nameCheckIn": "Sylvester James",
+        "surnameCheckIn": "Jacobs",
+        "ageCheckIn": "46"
+    },
+    {
+        "nameCheckIn": "Tanisha Horn",
+        "surnameCheckIn": "Robbins",
+        "ageCheckIn": "21"
+    },
+    {
+        "nameCheckIn": "Kirby Clark",
+        "surnameCheckIn": "Bolton",
+        "ageCheckIn": "16"
+    },
+    {
+        "nameCheckIn": "Mary Finch",
+        "surnameCheckIn": "Noble",
+        "ageCheckIn": "38"
+    },
+    {
+        "nameCheckIn": "Ralph Barlow",
+        "surnameCheckIn": "Finch",
+        "ageCheckIn": "32"
+    },
+    {
+        "nameCheckIn": "Brendan Shelton",
+        "surnameCheckIn": "Sparks",
+        "ageCheckIn": "5"
+    },
+    {
+        "nameCheckIn": "Athena Bush",
+        "surnameCheckIn": "Stuart",
+        "ageCheckIn": "65"
+    },
+    {
+        "nameCheckIn": "TaShya Little",
+        "surnameCheckIn": "Bush",
+        "ageCheckIn": "79"
+    },
+    {
+        "nameCheckIn": "Owen Ewing",
+        "surnameCheckIn": "Hurst",
+        "ageCheckIn": "15"
+    },
+    {
+        "nameCheckIn": "Velma Bentley",
+        "surnameCheckIn": "Lynn",
+        "ageCheckIn": "46"
+    },
+    {
+        "nameCheckIn": "Kyra Soto",
+        "surnameCheckIn": "Meyer",
+        "ageCheckIn": "24"
+    },
+    {
+        "nameCheckIn": "Phoebe Riggs",
+        "surnameCheckIn": "Bates",
+        "ageCheckIn": "6"
+    },
+    {
+        "nameCheckIn": "Sybill Brown",
+        "surnameCheckIn": "Marquez",
+        "ageCheckIn": "17"
+    },
+    {
+        "nameCheckIn": "Uma Hebert",
+        "surnameCheckIn": "Foreman",
+        "ageCheckIn": "86"
+    },
+    {
+        "nameCheckIn": "Donna Walton",
+        "surnameCheckIn": "Harding",
+        "ageCheckIn": "21"
+    },
+    {
+        "nameCheckIn": "Xavier Dale",
+        "surnameCheckIn": "Navarro",
+        "ageCheckIn": "30"
+    },
+    {
+        "nameCheckIn": "Amaya Hurst",
+        "surnameCheckIn": "Howe",
+        "ageCheckIn": "7"
+    },
+    {
+        "nameCheckIn": "Kelsie Wheeler",
+        "surnameCheckIn": "French",
+        "ageCheckIn": "74"
+    },
+    {
+        "nameCheckIn": "Caryn Bright",
+        "surnameCheckIn": "Medina",
+        "ageCheckIn": "100"
+    },
+    {
+        "nameCheckIn": "Myles Frederick",
+        "surnameCheckIn": "Henderson",
+        "ageCheckIn": "26"
+    },
+    {
+        "nameCheckIn": "Cade Maynard",
+        "surnameCheckIn": "Graves",
+        "ageCheckIn": "5"
+    },
+    {
+        "nameCheckIn": "Brynne Guy",
+        "surnameCheckIn": "Hurley",
+        "ageCheckIn": "90"
+    },
+    {
+        "nameCheckIn": "Gemma Price",
+        "surnameCheckIn": "David",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Sigourney Webb",
+        "surnameCheckIn": "Stevens",
+        "ageCheckIn": "42"
+    },
+    {
+        "nameCheckIn": "Olga Wall",
+        "surnameCheckIn": "Duran",
+        "ageCheckIn": "15"
+    },
+    {
+        "nameCheckIn": "Mariam Petersen",
+        "surnameCheckIn": "Gray",
+        "ageCheckIn": "85"
+    },
+    {
+        "nameCheckIn": "Alden Nixon",
+        "surnameCheckIn": "Cantu",
+        "ageCheckIn": "43"
+    },
+    {
+        "nameCheckIn": "Derek Snider",
+        "surnameCheckIn": "Flowers",
+        "ageCheckIn": "58"
+    },
+    {
+        "nameCheckIn": "Derek Snider",
+        "surnameCheckIn": "Flowers",
+        "ageCheckIn": "58"
+    },
+    {
+        "nameCheckIn": "Montana Mcconnell",
+        "surnameCheckIn": "Holcomb",
+        "ageCheckIn": "38"
+    },
+    {
+        "nameCheckIn": "Oleg Ellis",
+        "surnameCheckIn": "Benson",
+        "ageCheckIn": "28"
+    },
+    {
+        "nameCheckIn": "Blaze Henry",
+        "surnameCheckIn": "Weber",
+        "ageCheckIn": "100"
+    },
+    {
+        "nameCheckIn": "Samuel Dale",
+        "surnameCheckIn": "Mason",
+        "ageCheckIn": "8"
+    },
+    {
+        "nameCheckIn": "Lydia Sloan",
+        "surnameCheckIn": "Sosa",
+        "ageCheckIn": "25"
+    },
+    {
+        "nameCheckIn": "Xenos Foley",
+        "surnameCheckIn": "Ball",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Xenos Foley",
+        "surnameCheckIn": "Ball",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Colby Hogan",
+        "surnameCheckIn": "Mcintyre",
+        "ageCheckIn": "31"
+    },
+    {
+        "nameCheckIn": "Linus Wilcox",
+        "surnameCheckIn": "Hodge",
+        "ageCheckIn": "89"
+    },
+    {
+        "nameCheckIn": "Summer Kramer",
+        "surnameCheckIn": "Luna",
+        "ageCheckIn": "43"
+    },
+    {
+        "nameCheckIn": "Berk Davidson",
+        "surnameCheckIn": "Baker",
+        "ageCheckIn": "25"
+    },
+    {
+        "nameCheckIn": "Aaron Sutton",
+        "surnameCheckIn": "Guzman",
+        "ageCheckIn": "45"
+    },
+    {
+        "nameCheckIn": "Ciaran Dickson",
+        "surnameCheckIn": "Hendrix",
+        "ageCheckIn": "78"
+    },
+    {
+        "nameCheckIn": "Jack Prince",
+        "surnameCheckIn": "Marquez",
+        "ageCheckIn": "30"
+    },
+    {
+        "nameCheckIn": "Aretha Berg",
+        "surnameCheckIn": "Rios",
+        "ageCheckIn": "18"
+    },
+    {
+        "nameCheckIn": "Carter Best",
+        "surnameCheckIn": "Robbins",
+        "ageCheckIn": "81"
+    },
+    {
+        "nameCheckIn": "Paki Park",
+        "surnameCheckIn": "Little",
+        "ageCheckIn": "82"
+    },
+    {
+        "nameCheckIn": "Kato Boyle",
+        "surnameCheckIn": "Bennett",
+        "ageCheckIn": "73"
+    },
+    {
+        "nameCheckIn": "Justina Cortez",
+        "surnameCheckIn": "Delacruz",
+        "ageCheckIn": "42"
+    },
+    {
+        "nameCheckIn": "Emerson Walls",
+        "surnameCheckIn": "Tillman",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Emerson Walls",
+        "surnameCheckIn": "Tillman",
+        "ageCheckIn": "83"
+    },
+    {
+        "nameCheckIn": "Beatrice Griffin",
+        "surnameCheckIn": "Mann",
+        "ageCheckIn": "79"
+    },
+    {
+        "nameCheckIn": "Raja Simon",
+        "surnameCheckIn": "Woods",
+        "ageCheckIn": "75"
+    },
+    {
+        "nameCheckIn": "Bethany Rhodes",
+        "surnameCheckIn": "Hale",
+        "ageCheckIn": "40"
+    },
+    {
+        "nameCheckIn": "Sylvester James",
+        "surnameCheckIn": "Jacobs",
+        "ageCheckIn": "46"
+    },
+    {
+        "nameCheckIn": "Tanisha Horn",
+        "surnameCheckIn": "Robbins",
+        "ageCheckIn": "21"
+    },
+    {
+        "nameCheckIn": "Kirby Clark",
+        "surnameCheckIn": "Bolton",
+        "ageCheckIn": "16"
+    },
+    {
+        "nameCheckIn": "Mary Finch",
+        "surnameCheckIn": "Noble",
+        "ageCheckIn": "38"
+    },
+    {
+        "nameCheckIn": "Ralph Barlow",
+        "surnameCheckIn": "Finch",
+        "ageCheckIn": "32"
+    },
+    {
+        "nameCheckIn": "Brendan Shelton",
+        "surnameCheckIn": "Sparks",
+        "ageCheckIn": "5"
+    }
+]
 let countObjPage=10; // // кількість обєктів на сторінці
 let currentPage = 0; // // поточна сторінка
 function arrDisplay() {
