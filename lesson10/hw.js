@@ -20,9 +20,6 @@ buttonCheckIn.onclick=function (e) {
     divMyCheck.classList.add('divMyCheck');
     divMyCheck.innerHTML=`${nameCheckIn.value} ${surnameCheckIn.value} ${ageCheckIn.value}`
     formCheckIn.appendChild(divMyCheck);
-    // let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
-    // arrayHundred.push({nameCheckIn:`${nameCheckIn.value}`,surnameCheckIn:`${surnameCheckIn.value}`,ageCheckIn:`${ageCheckIn.value}`});
-    // localStorage.setItem('arrHundred', JSON.stringify(arrayHundred));
 }
 
 // // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
@@ -650,3 +647,27 @@ divTextBtn.appendChild(textBtn);
 divTextBtn.appendChild(clearBtn);
 document.body.appendChild(divText);
 document.body.appendChild(divTextBtn);
+// // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+// //  При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+
+let divAge=document.createElement('div');
+document.body.appendChild(divAge);
+let formAge=document.getElementById('f2');
+let ageInput=document.getElementById('age people');
+let labelAge0=document.getElementsByTagName('label')[0];
+let buttonAge=document.getElementsByClassName('ageButton')[0];
+formAge.append(labelAge0,ageInput,buttonAge);
+
+buttonAge.onclick=function (e) {
+    e.preventDefault();
+    let divAudit=document.createElement('div');
+    divAudit.classList.add('divAudit');
+    if(ageInput.value<18){
+        divAudit.innerHTML=`вік меньше ніж 18 років`
+        divAudit.style.background='indianred';
+    } else{
+        divAudit.innerHTML=`повнолітній`
+    }
+    formAge.appendChild(divAudit);
+}
+divAge.append(formAge);

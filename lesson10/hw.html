@@ -15,11 +15,13 @@
             flex-wrap: wrap;
             flex-direction: column;
         }
-        .createButton{
-            background-color: cadetblue;
-            width: 100px;
-            height: 35px;
+        #f2{
+            width: 400vw;
+            height: 20vh;
             font-size: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
         input{
             width: 40vw;
@@ -27,7 +29,7 @@
             font-size: 24px;
             background-color: rgba(100, 149, 237, 0.59);
         }
-        .divMyCheck{
+        .divMyCheck,.divAudit{
             font-size: 24px;
             background-color: #067d81;
             width: 40vw;
@@ -59,7 +61,7 @@
             align-items: center;
             margin: 10px 0;
         }
-        .nextBtn,.textBtn{
+        .ageButton,.createButton,.nextBtn,.textBtn{
             background-color: cadetblue;
             width: 100px;
             height: 35px;
@@ -96,6 +98,12 @@
     <label for="age">Введіть свій вік:</label>
     <input type="number" name="age" id="age" placeholder="age">
     <button class="createButton">click</button>
+</form>
+
+<form id="f2" action="#">
+    <label for="age people">Введіть свій вік:</label>
+    <input type="number" name="age" id="age people" placeholder="age">
+    <button class="ageButton">click</button>
 </form>
 
 <script src="hw.js"></script>
