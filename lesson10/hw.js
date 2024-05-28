@@ -186,11 +186,7 @@ let countObjPage=10; // // кількість обєктів на сторінц
 let currentPage = 0; // // поточна сторінка
 
 window.onload = function(){
-    for (let arrOne of arrHundred){
-        arrHundred.length = 10;
-        divElements.innerHTML=JSON.stringify(arrHundred)
-
-    }
+    let startIndex=
 }
 
 
