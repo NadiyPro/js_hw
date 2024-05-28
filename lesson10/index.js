@@ -3,9 +3,3 @@
 // // Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
 // let divSessions=document.createElement('div');
 //
-let dateSessions = new Date();
-let arraySessions = localStorage.getItem('sessions') || [];
-arraySessions.push(dateSessions);
-localStorage.setItem('count', JSON.stringify(arraySessions));
-
-document.body.appendChild(divSessions);
