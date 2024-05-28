@@ -58,24 +58,47 @@ nextBtn.innerHTML='next'
 let prevBtn =document.createElement('button');
 prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
-let arrayHundred = [];
+let arrayHundred = [
+    {
+        id: 1
+    }
+];
+Array.prototype.objHundred = function (callback){
     for(let i=0;i<100;i++){
-        arrayHundred.push(arrayHundred.length = i);
-        divElements.innerHTML=`${arrayHundred}`
+        this.callback=i;
+        console.log(this.callback)
+       // this.push(callback = i);
     }
-let localHundred =JSON.parse(localStorage.getItem('arrHundred') )|| [] ;
-localHundred.push(arrayHundred);
-localStorage.setItem('arrHundred', JSON.stringify(localHundred));
-console.log(arrayHundred)
-window.onload = function(){
-
-    for(let i=1;i<10;i++){
-        arrayHundred.length = 10;
-        divElements.innerHTML=`${arrayHundred}`
-    }
-
 }
+arrayHundred.objHundred=((value)=>value.id);
 
+console.log(arrayHundred)
+// divElements.innerHTML=`${this}`
+
+    // for(let i=0;i<100;i++){
+    //
+    //     arrayHundred.push(arrayHundred.length = i);
+    //     divElements.innerHTML=`${arrayHundred}`
+    // }
+// let localHundred =JSON.parse(localStorage.getItem('arrHundred') )|| [] ;
+// localHundred.push(arrayHundred);
+// localStorage.setItem('arrHundred', JSON.stringify(localHundred));
+// console.log(arrayHundred)
+// window.onload = function(){
+//     for(let i=1;i<10;i++){
+//         arrayHundred.length = 10;
+//     }
+//     divElements.innerHTML=`${arrayHundred}`
+// }
+
+
+
+// nextBtn.onclick=function (e) {
+//     e.preventDefault();
+//     for(let i=11;i<20;i++){
+//         arrayHundred.length = 10;
+//
+//     }divElements.innerHTML=`${arrayHundred}`
 
 
 
@@ -87,15 +110,6 @@ window.onload = function(){
 //
 // }
 
-// divNext.innerHTML = `${arrayHundred}`;
-// nextBtn.onclick=function (e) {
-//     e.preventDefault();
-//     for(let i=11;i<20;i++){
-//         arrayHundred.length = 10;
-//         console.log(arrayHundred)
-//         divElements.innerHTML=`${arrayHundred}`
-//     }
-// }
 
 divNext.appendChild(nextBtn);
 divNext.appendChild(prevBtn);
