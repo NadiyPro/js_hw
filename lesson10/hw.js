@@ -53,7 +53,17 @@ let arrayHundred = [];
         arrayHundred.push([arrayHundred.length] = [i]);
     }
 console.log(arrayHundred)
+window.onload = function(){
+   // for (let hundred of arrayHundred){
+       for(let i=0;i<10;i++){
+           arrayHundred[arrayHundred.length] = [i];
+       } console.log(arrayHundred)
+       // for(let i=0;i<10;i++){
+       //     [hundred.length]=[i]; console.log(hundred)
+       // }
+   // }
 
+}
 
 
 
