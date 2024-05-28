@@ -63,7 +63,7 @@ let prevBtn =document.createElement('button');
 prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
 
-// обєкти забираю зі сховища, які сформувала в першому завдані name,surname,age
+// // обєкти забираю зі сховища, які сформувала в першому завдані name,surname,age
 buttonCheckIn.addEventListener('click',function (){
     let arrayHundred=JSON.parse(localStorage.getItem('arrHundred')) || [ ];
     arrayHundred.push({nameCheckIn:`${nameCheckIn.value}`,surnameCheckIn:`${surnameCheckIn.value}`,ageCheckIn:`${ageCheckIn.value}`});
@@ -596,7 +596,7 @@ let currentPage = 0; // // поточна сторінка
 function arrDisplay() {
     let startIndex = countObjPage * currentPage;
     let finalIndex = startIndex + countObjPage;
-    let currentItems = arrHundred.slice(startIndex, finalIndex);
+    let currentItems = arrHundred.slice(startIndex, finalIndex); // // обрізаємо згідно індексів кількість елементів які хочемо відображати
     divElements.innerHTML='';
     for (let oneElement of currentItems) {
         let divOneElement = document.createElement('div');
@@ -610,22 +610,21 @@ nextBtn.onclick=function nextPage () {
     if(currentPage>=Math.floor(arrHundred.length / countObjPage)){
         currentPage = 0;
     }
-    arrDisplay();
+    arrDisplay(); // // функція запрацює після того, як ми її тут покличемо
 }
 prevBtn.onclick=function prevPage () {
     currentPage--;
     if(currentPage<0){
         currentPage=Math.floor(arrHundred.length / countObjPage)-1
     }
-    arrDisplay();
+    arrDisplay(); // // функція запрацює після того, як ми її тут покличемо
 }
 window.onload=function () {
-    arrDisplay();
+    arrDisplay(); // // стартове завантаження з відображенням інфо
 }
-
 divNext.appendChild(nextBtn);
 divNext.appendChild(prevBtn);
 document.body.appendChild(divElements);
 document.body.appendChild(divNext);
-
+// // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 
