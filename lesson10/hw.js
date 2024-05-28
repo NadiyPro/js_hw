@@ -60,20 +60,42 @@ prevBtn.classList.add('prevBtn');
 prevBtn.innerHTML='prev'
 let arrayHundred = [];
     for(let i=0;i<100;i++){
-        arrayHundred.push([arrayHundred.length] = [i]);
+        arrayHundred.push(arrayHundred.length = i);
+        divElements.innerHTML=`${arrayHundred}`
     }
+let localHundred =JSON.parse(localStorage.getItem('arrHundred') )|| [] ;
+localHundred.push(arrayHundred);
+localStorage.setItem('arrHundred', JSON.stringify(localHundred));
 console.log(arrayHundred)
-    window.onload = function(){
-       for(let i=0;i<10;i++){
-           arrayHundred.length = 10;
-       }
+window.onload = function(){
+
+    for(let i=1;i<10;i++){
+        arrayHundred.length = 10;
+        divElements.innerHTML=`${arrayHundred}`
+    }
+
 }
+
+
+
+
+//     window.onload = function(){
+//        for(let i=1;i<10;i++){
+//            arrayHundred.length = 10;
+//            divElements.innerHTML=`${arrayHundred}`
+//        }
+//
+// }
 
 // divNext.innerHTML = `${arrayHundred}`;
-nextBtn.onclick=function (e) {
-    e.preventDefault();
-
-}
+// nextBtn.onclick=function (e) {
+//     e.preventDefault();
+//     for(let i=11;i<20;i++){
+//         arrayHundred.length = 10;
+//         console.log(arrayHundred)
+//         divElements.innerHTML=`${arrayHundred}`
+//     }
+// }
 
 divNext.appendChild(nextBtn);
 divNext.appendChild(prevBtn);
