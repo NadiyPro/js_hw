@@ -604,7 +604,6 @@ function arrDisplay() {
         divElements.appendChild(divOneElement);
     }
 }
-
 nextBtn.onclick=function nextPage () {
     currentPage++;
     if(currentPage>=Math.floor(arrHundred.length / countObjPage)){
@@ -627,4 +626,14 @@ divNext.appendChild(prevBtn);
 document.body.appendChild(divElements);
 document.body.appendChild(divNext);
 // // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+let divText = document.createElement('div');
+divText.classList.add('divText');
+let divTextBtn = document.createElement('div');
+divTextBtn.classList.add('divTextBtn');
+let textBtn =document.createElement('button');
+textBtn.classList.add('textBtn');
 
+textBtn.innerHTML='clear'
+divTextBtn.appendChild(textBtn);
+document.body.appendChild(divText);
+document.body.appendChild(divTextBtn);
