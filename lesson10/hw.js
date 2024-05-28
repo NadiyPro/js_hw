@@ -182,11 +182,13 @@ let arrHundred = [
             "ageCheckIn": "38"
         }
 ];
-let countObjPage=10; // // кількість обєктів на сторінці
-let currentPage = 0; // // поточна сторінка
+// let countObjPage=10; // // кількість обєктів на сторінці
+// let currentPage = 0; // // поточна сторінка
 
 window.onload = function(){
-    let startIndex=
+    let startIndex=arrHundred.slice(0,10);
+    console.log(startIndex)
+    divElements.innerHTML=`${startIndex}`
 }
 
 
