@@ -8,9 +8,9 @@ for(let session of mySessions){
     console.log(session)
     let divSession=document.createElement('div');
     divSession.classList.add('divSession');
-    let sss=JSON.stringify(session);
-    divSession.innerHTML=`${sss}`
+    let ddd = JSON.stringify(session);
+    divSession.innerHTML= `${ddd}`;
     divSessions.appendChild(divSession);
 }
-// divSessions.innerHTML=`${mySessions}`
+
 document.body.appendChild(divSessions);

@@ -42,14 +42,8 @@ document.body.appendChild(divNumber);
 
 let dateSessions = new Date();
 let arraySessions =JSON.parse(localStorage.getItem('sessions') )|| [] ;
-arraySessions.push({dateSessions});
+arraySessions.push(dateSessions);
 localStorage.setItem('sessions', JSON.stringify(arraySessions));
 
-
-    // divSessions.innerHTML=`${arraySessions}`
-
-// }
-// document.body.appendChild(divSessions);
-// localStorage.setItem('sessions', JSON.stringify(arraySessions));
 
 
