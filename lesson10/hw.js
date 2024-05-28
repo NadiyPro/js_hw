@@ -187,8 +187,8 @@ let arrHundred = [
 
 window.onload = function(){
     let startIndex=arrHundred.slice(0,10);
-    console.log(startIndex)
-    divElements.innerHTML=`${startIndex}`
+    let jsonStartIndex = JSON.stringify(startIndex);
+    divElements.innerHTML=`${jsonStartIndex}`
 }
 
 
