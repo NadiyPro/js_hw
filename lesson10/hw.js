@@ -48,15 +48,19 @@ localStorage.setItem('sessions', JSON.stringify(arraySessions));
 // // при завантажені сторінки з'являються перші 10 об'єктів.
 // // При натисканні next виводяться настпні 10 об'єктів
 // // При натисканні prev виводяться попередні 10 об'єктів
+let divNext = document.createElement('div');
+divNext.classList.add('divNext');
+let nextBtn =document.createElement('button');
+nextBtn.classList.add('nextBtn');
+nextBtn.innerHTML='next'
 let arrayHundred = [];
     for(let i=0;i<100;i++){
         arrayHundred.push([arrayHundred.length] = [i]);
     }
 console.log(arrayHundred)
 window.onload = function(){
-   // for (let hundred of arrayHundred){
        for(let i=0;i<10;i++){
-           arrayHundred[arrayHundred.length] = [i];
+           arrayHundred.length = 10;
        } console.log(arrayHundred)
        // for(let i=0;i<10;i++){
        //     [hundred.length]=[i]; console.log(hundred)
@@ -64,6 +68,7 @@ window.onload = function(){
    // }
 
 }
-
+divNext.appendChild(nextBtn);
+document.body.appendChild(divNext);
 
 
