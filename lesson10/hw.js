@@ -686,16 +686,16 @@ let contentsInput=document.getElementById('contents');
 let buttonTable=document.getElementsByClassName('tableButton')[0];
 formTable.append(labelTable0,linesInput,labelTable1,columnsInput,labelTable2,contentsInput,buttonTable);
 
-buttonTable.onclick=function (e) {
+buttonTable.addEventListener('click', function (e) {
     e.preventDefault();
     let divTableRez=document.createElement('div');
     divTableRez.classList.add('divTableRez');
-    if(ageInput.value<18){
-        divAudit.innerHTML=`вік меньше ніж 18 років`
-        divAudit.style.background='indianred';
-    } else{
-        divAudit.innerHTML=`повнолітній`
-    }
-    formTable.appendChild(divAudit);
-}
+    // if(ageInput.value<18){
+    //     divAudit.innerHTML=`вік меньше ніж 18 років`
+    //     divAudit.style.background='indianred';
+    // } else{
+    //     divAudit.innerHTML=`повнолітній`
+    // }
+    formTable.appendChild(divTableRez);
+})
 divTable.append(formTable);
