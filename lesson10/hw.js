@@ -689,14 +689,18 @@ formTable.append(labelTable0,linesInput,labelTable1,columnsInput,labelTable2,con
 buttonTable.addEventListener('click', function (e) {
     e.preventDefault();
     let table=document.getElementsByTagName('table')[0];
-    let arrayLines=JSON.parse(localStorage.getItem('arrayLines') )|| [] ;
-    // arrayLines.push(dateSessions);
-    localStorage.setItem('arrayLines', JSON.stringify(arrayLines));
-    console.log(arrayLines)
-    // let divTableRez=document.createElement('div');
-    // divTableRez.classList.add('divTableRez');
-    // formTable.appendChild(divTableRez);
-    table.append(formTable);
+    let lines =linesInput.value;
+    let columns =columnsInput.value;
+    let contents =contentsInput.value;
+    for (let i=0;i<lines;i++) {
+        let createLines = document.createElement('tr');
+        for (let i = 0; i < columns; i++) {
+            let createColumns = document.createElement('td');
+        }
+        table.append(lines);
+        formTable.append(table);
+    }
+
 })
 divTable.append(formTable);
 
