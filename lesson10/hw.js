@@ -700,7 +700,6 @@ buttonTable.addEventListener('click', function (e) {
             lines.append(createColumns)
         }
         table.append(lines);
-
     }
     divTable.append(table);
 })
