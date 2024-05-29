@@ -5,11 +5,11 @@ let divCheckIn=document.createElement('div');
 document.body.appendChild(divCheckIn);
 let formCheckIn=document.getElementById('f1');
 divCheckIn.append(formCheckIn);
-let labelCheckIn0=document.getElementsByTagName('label')[0];
+let labelCheckIn0=document.getElementsByClassName('nameLabel')[0];
 let nameCheckIn=document.getElementById('name');
-let labelCheckIn1=document.getElementsByTagName('label')[1];
+let labelCheckIn1=document.getElementsByClassName('surnameLabel')[0];
 let surnameCheckIn=document.getElementById('surname');
-let labelCheckIn2=document.getElementsByTagName('label')[2];
+let labelCheckIn2=document.getElementsByClassName('ageLabel')[0];
 let ageCheckIn=document.getElementById('age');
 let buttonCheckIn=document.getElementsByClassName('createButton')[0];
 formCheckIn.append(labelCheckIn0,nameCheckIn,labelCheckIn1,surnameCheckIn,labelCheckIn2,ageCheckIn,buttonCheckIn);
@@ -653,7 +653,7 @@ document.body.appendChild(divTextBtn);
 let divAge=document.createElement('div');
 document.body.appendChild(divAge);
 let formAge=document.getElementById('f2');
-let labelAge0=document.getElementsByTagName('label')[0];
+let labelAge0=document.getElementsByClassName('agePeople')[0];
 let ageInput=document.getElementById('age people');
 let buttonAge=document.getElementsByClassName('ageButton')[0];
 formAge.append(labelAge0,ageInput,buttonAge);
@@ -677,25 +677,27 @@ divAge.append(formAge);
 let divTable=document.createElement('div');
 document.body.appendChild(divTable);
 let formTable=document.getElementById('table');
-let labelTable0=document.getElementsByTagName('label')[0];
+let labelTable0=document.getElementsByClassName('tableLines')[0];
 let linesInput=document.getElementById('lines');
-let labelTable1=document.getElementsByTagName('label')[1];
+let labelTable1=document.getElementsByClassName('tableColumns')[0];
 let columnsInput=document.getElementById('columns');
-let labelTable2=document.getElementsByTagName('label')[2];
+let labelTable2=document.getElementsByClassName('tableContents')[0];
 let contentsInput=document.getElementById('contents');
 let buttonTable=document.getElementsByClassName('tableButton')[0];
 formTable.append(labelTable0,linesInput,labelTable1,columnsInput,labelTable2,contentsInput,buttonTable);
 
 buttonTable.addEventListener('click', function (e) {
     e.preventDefault();
-    let divTableRez=document.createElement('div');
-    divTableRez.classList.add('divTableRez');
-    // if(ageInput.value<18){
-    //     divAudit.innerHTML=`вік меньше ніж 18 років`
-    //     divAudit.style.background='indianred';
-    // } else{
-    //     divAudit.innerHTML=`повнолітній`
-    // }
-    formTable.appendChild(divTableRez);
+    let table=document.getElementsByTagName('table')[0];
+    let arrayLines=JSON.parse(localStorage.getItem('arrayLines') )|| [] ;
+    // arrayLines.push(dateSessions);
+    localStorage.setItem('arrayLines', JSON.stringify(arrayLines));
+    console.log(arrayLines)
+    // let divTableRez=document.createElement('div');
+    // divTableRez.classList.add('divTableRez');
+    // formTable.appendChild(divTableRez);
+    table.append(formTable);
 })
 divTable.append(formTable);
+
+

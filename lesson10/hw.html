@@ -69,7 +69,7 @@
             align-items: center;
             margin: 10px 0;
         }
-        .ageButton,.createButton,.nextBtn,.textBtn{
+        .ageButton,.createButton,.nextBtn,.textBtn,.tableButton{
             background-color: cadetblue;
             width: 100px;
             height: 35px;
@@ -107,26 +107,26 @@
 <body>
 
 <form id="f1" action="#">
-    <label for="name">Введіть своє Імя:</label>
+    <label for="name" class="nameLabel">Введіть своє Імя:</label>
     <input type="text" name="name" id="name" placeholder="name">
-    <label for="surname">Введіть своє Призвіще:</label>
+    <label for="surname" class="surnameLabel">Введіть своє Призвіще:</label>
     <input type="text" name="surname" id="surname" placeholder="surname">
-    <label for="age">Введіть свій вік:</label>
+    <label for="age" class="ageLabel">Введіть свій вік:</label>
     <input type="number" name="age" id="age" placeholder="age">
     <button class="createButton">click</button>
 </form>
 
 <form id="f2" action="#">
-    <label for="age people">Введіть свій вік:</label>
+    <label for="age people" class="agePeople">Введіть свій вік:</label>
     <input type="number" name="age" id="age people" placeholder="age">
     <button class="ageButton">click</button>
 </form>
 <form id="table" action="#">
-    <label for="lines">Введіть  кількість рядків:</label>
-    <input type="number" name="lines" id="lines" placeholder="number of lines">
-    <label for="columns">Введіть  кількість стовбчиків:</label>
-    <input type="number" name="columns" id="columns" placeholder="number of columns">
-    <label for="contents">Введіть  кількість рядків:</label>
+    <label for="lines" class="tableLines">Введіть  кількість рядків:</label>
+    <input type="number" name="lines" id="lines" placeholder="number of lines" min="1" max="10">
+    <label for="columns" class="tableColumns">Введіть  кількість стовбчиків:</label>
+    <input type="number" name="columns" id="columns" placeholder="number of columns" min="1" max="10">
+    <label for="contents" class="tableContents">Введіть  кількість рядків:</label>
     <input type="text" name="contents" id="contents" placeholder="cell contents">
     <button class="tableButton">click</button>
 </form>
