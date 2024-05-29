@@ -688,19 +688,21 @@ formTable.append(labelTable0,linesInput,labelTable1,columnsInput,labelTable2,con
 
 buttonTable.addEventListener('click', function (e) {
     e.preventDefault();
-    let table=document.getElementsByTagName('table')[0];
+    let table=document.createElement('table');
     let lines =linesInput.value;
     let columns =columnsInput.value;
     let contents =contentsInput.value;
     for (let i=0;i<lines;i++) {
-        let createLines = document.createElement('tr');
+        let lines = document.createElement('tr');
         for (let i = 0; i < columns; i++) {
             let createColumns = document.createElement('td');
+            createColumns.textContent=contents;
+            lines.append(createColumns)
         }
         table.append(lines);
-        formTable.append(table);
-    }
 
+    }
+    divTable.append(table);
 })
 divTable.append(formTable);
 
