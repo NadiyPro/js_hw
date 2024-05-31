@@ -24,12 +24,24 @@ fetch('https://dummyjson.com/recipes')
 
             const ingredientsUl = document.createElement('ul');
             // ingredientsUl.classList.add('ingredientsUl');
+            ingredientsUl.innerHTML = `Ingredients:`
             hDiv.append(ingredientsUl)
 
             for(let iter of description.ingredients){
                 const ingredientsLi = document.createElement('li');
                 ingredientsLi.innerHTML=`${iter}`
                 ingredientsUl.append(ingredientsLi)
+            }
+
+            const instructionsOl = document.createElement('ol');
+            // instructionsOl.classList.add('instructionsOl');
+            instructionsOl.innerHTML=`Instructions:`
+            hDiv.append(instructionsOl)
+
+            for(let iterOl of description.ingredients){
+                const instructionsLi = document.createElement('li');
+                instructionsLi.innerHTML=`${iterOl}`
+                instructionsOl.append(instructionsLi)
             }
 
             innerDiv.append(hDiv)
