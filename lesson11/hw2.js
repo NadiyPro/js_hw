@@ -20,7 +20,7 @@ fetch('https://dummyjson.com/recipes')
 
             const hDiv = document.createElement('div');
             hDiv.classList.add('hDiv');
-            hDiv.innerHTML=`<h2>id: ${description.id} <br> ${description.name} </h2> <p> rating: ${description.rating} <br> cuisine: ${description.cuisine} <br> difficulty: ${description.difficulty} <br> caloriesPerServing: ${description.caloriesPerServing} <br> cookTimeMinutes: ${description.cookTimeMinutes} <br> prepTimeMinutes: ${description.prepTimeMinutes} <br> reviewCount: ${description.reviewCount} <br> servings:  ${description.servings} <br> userId: ${description.userId}   </p>`
+            hDiv.innerHTML=`<h2>id: ${description.id} <br> ${description.name} </h2> <p> rating: ${description.rating} <br> cuisine: ${description.cuisine} <br> difficulty: ${description.difficulty} <br> caloriesPerServing: ${description.caloriesPerServing} <br> cookTimeMinutes: ${description.cookTimeMinutes} <br> prepTimeMinutes: ${description.prepTimeMinutes} <br> reviewCount: ${description.reviewCount} <br> servings:  ${description.servings} <br> userId: ${description.userId} <br> mealType: ${description.mealType} <br>  tags: ${description.tags} </p>`
             imgDiv.append(hDiv)
 
             const img = document.createElement('img');
@@ -53,17 +53,6 @@ fetch('https://dummyjson.com/recipes')
                 instructionsLi.innerHTML=`${iterOl}`
                 instructionsOl.append(instructionsLi)
             }
-
-            // const finishDiv = document.createElement('div');
-            // finishDiv.classList.add('finishDiv');
-            // hDiv.append(finishDiv)
-
-            // for(let iterType of description.mealType){
-            //     finishDiv.innerHTML=`${iterType}`
-            // }
-            // for(let iterTags of description.tags){
-            //     finishDiv.innerHTML=`${iterTags}`
-            // }
 
 
         }
