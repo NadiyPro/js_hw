@@ -21,7 +21,7 @@ fetch('http://jsonplaceholder.typicode.com/users')
                 const userA = document.createElement('a');
                 userA.classList.add('userA');
                 userA.innerHTML =`user-details`
-                userA.href =`js_hw/lesson11/user-details.html?id=${user.id}`
+                userA.href =`js_hw/lesson11/user-details.html?id==${user.id}`
                 basicDiv.append(userDiv);
                 userDiv.append(userA);
             }
