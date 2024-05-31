@@ -38,10 +38,21 @@ fetch('https://dummyjson.com/recipes')
             instructionsOl.innerHTML=`Instructions:`
             hDiv.append(instructionsOl)
 
-            for(let iterOl of description.ingredients){
+            for(let iterOl of description.instructions){
                 const instructionsLi = document.createElement('li');
                 instructionsLi.innerHTML=`${iterOl}`
                 instructionsOl.append(instructionsLi)
+            }
+
+            const finishDiv = document.createElement('div');
+            finishDiv.classList.add('finishDiv');
+            innerDiv.append(finishDiv)
+
+            for(let iterType of description.mealType){
+                finishDiv.innerHTML=`${iterType}`
+            }
+            for(let iterTags of description.tags){
+                finishDiv.innerHTML=`${iterTags}`
             }
 
             innerDiv.append(hDiv)
