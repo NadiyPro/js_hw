@@ -14,22 +14,20 @@ fetch('https://dummyjson.com/carts')
                 let cartDiv=document.createElement('div');
                 cartDiv.classList.add('cartDiv');
                 let idBasicH2=document.createElement('h3');
-                // idBasicH2.classList.add('idBasicH3')
+                idBasicH2.classList.add('idBasicH3')
                 idBasicH2.innerHTML=`${cart.id}`
-                    for (let item of cart.products) {
+                let cartProd = cart.products;
+
+                    for (let {thumbnail} of cartProd) {
+
                         let productsDiv = document.createElement('div');
                         productsDiv.classList.add('productsDiv')
                         let img = document.createElement('img');
-                        img.classList.add('imgProducts')
-                        img.src=item.thumbnail;
-                        // let titleH2 = document.createElement('h2');
-                        // titleH2.innerHTML=`${item.title}`
-                        // titleH2.classList.add('titleH2')
-
+                        img.classList.add('img')
+                        img.src=`${thumbnail}`;
+                        console.log(thumbnail)
                         idBasicH2.append(productsDiv)
-                        // productsDiv.append(titleH2)
                         idBasicH2.append(img)
-
                     }
                 // }
                 //     // for(let thum in product.thumbnail){
