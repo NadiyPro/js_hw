@@ -9,14 +9,20 @@ window.onload=function () {
     detailsDiv.classList.add('detailsDiv');
     document.body.append(detailsDiv);
 
-    let urlGet = (id)=>'js_hw/lesson11/user-details.html?id='+id;
-    console.log(urlGet)
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('id')
 
-    const url = new URL('window.location.search')
-    console.log(url)
-    //
+    fetch('https://jsonplaceholder.typicode.com/users/userId')
+    .then((response)=>response.json())
+    .then((userId)=>console.log(userId))
+
 }
 
-// fetch('user-details.html?id=${idDetail}')
-//     .then((response)=>response.json())
-//     .then((idDetail)=>console.log(idDetail))
+// document.addEventListener('DOMContentLoaded', () => {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const userId = urlParams.get('id');
+//
+//     fetch('https://jsonplaceholder.typicode.com/users/userId')
+//         .then((response)=>response.json())
+//         .then((userId)=>console.log(userId))
+// })
