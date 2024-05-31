@@ -13,25 +13,27 @@ fetch('https://dummyjson.com/carts')
             for(let cart of carts){
                 let cartDiv=document.createElement('div');
                 cartDiv.classList.add('cartDiv');
-                let idBasicH2=document.createElement('h3');
-                idBasicH2.classList.add('idBasicH3')
-                idBasicH2.innerHTML=`${cart.id}`
-                let cartProd = cart.products;
-
-                    for (let {thumbnail} of cartProd) {
-
+                let idBasicH3=document.createElement('h3');
+                idBasicH3.classList.add('idBasicH3')
+                idBasicH3.innerHTML=`${cart.id}`
+                    for (let product of cart.products) {
                         let productsDiv = document.createElement('div');
                         productsDiv.classList.add('productsDiv')
                         let img = document.createElement('img');
                         img.classList.add('img')
-                        img.src=`${thumbnail}`;
-                        console.log(thumbnail)
-                        idBasicH2.append(productsDiv)
-                        idBasicH2.append(img)
+                        img.src=product.thumbnail;
+                        productsDiv.innerHTML=`<h2>${product.title}</h2> <p>discountPercentage: ${product.discountPercentage} <br> discountedTotal: ${product.discountedTotal} <br> id:${product.id} <br> price: ${product.price} <br> quantity:${product.quantity}</p> `
+                        productsDiv.append(img);
+                        idBasicH3.append(productsDiv);
                     }
                 basicDiv.append(cartDiv)
-                cartDiv.append(idBasicH2)
-
+                cartDiv.append(idBasicH3)
             }
-    }
-        )
+    })
+// .catch(
+//     (products)=>console.log('image is missing id 25')
+// )
+//     https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/thumbnail.png - відсутнє зображення в 25 елементі через що вибиває помилку
+
+
+
