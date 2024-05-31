@@ -15,7 +15,6 @@ fetch('https://dummyjson.com/carts')
                     const productsDiv = document.createElement('div');
                         productsDiv.classList.add('productsDiv')
                     const img = document.createElement('img');
-                        img.classList.add('img')
                         img.src=product.thumbnail;
                         productsDiv.innerHTML=`<h3>${product.title}</h3> <p>discountPercentage: ${product.discountPercentage} <br> discountedTotal: ${product.discountedTotal} <br> id:${product.id} <br> price: ${product.price} <br> quantity:${product.quantity}</p> `
                         productsDiv.append(img);

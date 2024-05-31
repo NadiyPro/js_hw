@@ -17,7 +17,9 @@ fetch('https://dummyjson.com/recipes')
             const hDiv = document.createElement('div');
             hDiv.classList.add('hDiv');
             hDiv.innerHTML=`<h2>id: ${description.id} <br> ${description.name} </h2> <p> cuisine: ${description.cuisine} <br> difficulty: ${description.difficulty} <br> caloriesPerServing: ${description.caloriesPerServing} <br> cookTimeMinutes: ${description.cookTimeMinutes}</p>`
-            const
+            const img = document.createElement('img');
+            // img.classList.add('img');
+
             innerDiv.append(hDiv)
 
 
