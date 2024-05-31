@@ -16,12 +16,15 @@ fetch('https://dummyjson.com/recipes')
 
             const hDiv = document.createElement('div');
             hDiv.classList.add('hDiv');
-            hDiv.innerHTML=`<h2>id: ${description.id} <br> ${description.name} </h2> <p> cuisine: ${description.cuisine} <br> difficulty: ${description.difficulty} <br> caloriesPerServing: ${description.caloriesPerServing} <br> cookTimeMinutes: ${description.cookTimeMinutes}</p>`
+            hDiv.innerHTML=`<h2>id: ${description.id} <br> ${description.name} </h2> <p> rating: ${description.rating} <br> cuisine: ${description.cuisine} <br> difficulty: ${description.difficulty} <br> caloriesPerServing: ${description.caloriesPerServing} <br> cookTimeMinutes: ${description.cookTimeMinutes} <br> prepTimeMinutes: ${description.prepTimeMinutes} <br> reviewCount: ${description.reviewCount} <br> servings:  ${description.servings} <br> userId: ${description.userId}   </p>`
+
             const img = document.createElement('img');
-            // img.classList.add('img');
+            img.classList.add('img');
+            img.src=description.image;
+
 
             innerDiv.append(hDiv)
-
+            innerDiv.append(img)
 
         }
     })
