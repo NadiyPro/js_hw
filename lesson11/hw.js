@@ -29,20 +29,9 @@ fetch('https://dummyjson.com/carts')
                         idBasicH2.append(productsDiv)
                         idBasicH2.append(img)
                     }
-                // }
-                //     // for(let thum in product.thumbnail){
-                    //     let productsDiv =document.createElement('div');
-                    //     productsDiv.classList.add('productsDiv')
-                    //     console.log()
-                    //     idBasicH2.append(productsDiv)
-                    // }
-
-                // }
-
-
-
                 basicDiv.append(cartDiv)
                 cartDiv.append(idBasicH2)
+
             }
     }
         )
