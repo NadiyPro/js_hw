@@ -22,6 +22,15 @@ fetch('https://dummyjson.com/recipes')
             img.classList.add('img');
             img.src=description.image;
 
+            const ingredientsUl = document.createElement('ul');
+            // ingredientsUl.classList.add('ingredientsUl');
+            hDiv.append(ingredientsUl)
+
+            for(let iter of description.ingredients){
+                const ingredientsLi = document.createElement('li');
+                ingredientsLi.innerHTML=`${iter}`
+                ingredientsUl.append(ingredientsLi)
+            }
 
             innerDiv.append(hDiv)
             innerDiv.append(img)
