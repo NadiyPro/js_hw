@@ -4,10 +4,6 @@ basicDiv.classList.add('basicDiv');
 document.body.append(basicDiv)
 
 fetch('https://dummyjson.com/carts')
-.then((response)=>response.json())
-.then(({carts})=>console.log(carts))
-
-fetch('https://dummyjson.com/carts')
     .then((response)=>response.json())
     .then(({carts})=>{
             for(let cart of carts){
@@ -26,12 +22,14 @@ fetch('https://dummyjson.com/carts')
                     cartDiv.append(productsDiv);
                     }
                 basicDiv.append(cartDiv)
-            }
+        }
     })
-// .catch(
-//     (products)=>console.log('image is missing id 25')
-// )
-//     https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/thumbnail.png - відсутнє зображення в 25 елементі через що вибиває помилку
+    .finally(
+    ()=>console.log('image is missing id 25')
+)
+// https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/thumbnail.png - відсутнє зображення в 25 елементі через що вибиває помилку
+
+
 
 
 
