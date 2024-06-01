@@ -32,7 +32,7 @@ window.onload=function () {
 
             const divCompany = document.createElement('div');
             divCompany.innerHTML=`divCompany:`
-            divCompany.innerHTML = `<p>company: <br> name:${user.company.name} <br> catchPhrase:${user.company.catchPhrase} <br> bs:${user.company.bs}</p>`
+            divCompany.innerHTML = `<p>company: <br> name: ${user.company.name} <br> catchPhrase: ${user.company.catchPhrase} <br> bs: ${user.company.bs}</p>`
             innerDiv.append(divAddress);
             innerDiv.append(divCompany);
             }

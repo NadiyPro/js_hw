@@ -16,7 +16,6 @@ fetch('http://jsonplaceholder.typicode.com/users')
             for(let user of users){
                const userDiv = document.createElement('div');
                 userDiv.classList.add('userDiv');
-                // const idid= user.id;
                 userDiv.innerHTML = `<p>id: ${user.id} <br> name: ${user.name} </p>`
                 const userA = document.createElement('a');
                 userA.classList.add('userA');
