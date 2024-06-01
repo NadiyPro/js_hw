@@ -6,9 +6,6 @@
 const basicDiv = document.createElement('div');
 basicDiv.classList.add('basicDivDiv');
 document.body.append(basicDiv);
-fetch('http://jsonplaceholder.typicode.com/users')
-    .then((response)=>response.json())
-    .then((users)=>console.log(users))
 
 fetch('http://jsonplaceholder.typicode.com/users')
     .then((response)=>response.json())

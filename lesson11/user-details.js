@@ -17,9 +17,6 @@ window.onload=function () {
     innerDiv.innerHTML = `<h3>${userId}</h3>`
     detailsDiv.append(innerDiv);
 
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-    .then((response)=>response.json())
-    .then((user)=>console.log(user))
 
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         .then((response)=>response.json())
