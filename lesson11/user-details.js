@@ -34,6 +34,5 @@ window.onload=function () {
             innerDiv.append(divCompany);
             }
         )
-
 }
 
